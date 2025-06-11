@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36119.2 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Roguelike", "Roguelike\Roguelike.vcxproj", "{7318F854-6FF5-4CD0-9C1E-663304553EA0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5A368636-7288-4613-95B4-89A3FA2F8ABF} = {5A368636-7288-4613-95B4-89A3FA2F8ABF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RoTex", "RoTex\RoTex.vcxproj", "{5A368636-7288-4613-95B4-89A3FA2F8ABF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7318F854-6FF5-4CD0-9C1E-663304553EA0}.Debug|x64.ActiveCfg = Debug|x64
+		{7318F854-6FF5-4CD0-9C1E-663304553EA0}.Debug|x64.Build.0 = Debug|x64
+		{7318F854-6FF5-4CD0-9C1E-663304553EA0}.Debug|x86.ActiveCfg = Debug|Win32
+		{7318F854-6FF5-4CD0-9C1E-663304553EA0}.Debug|x86.Build.0 = Debug|Win32
+		{7318F854-6FF5-4CD0-9C1E-663304553EA0}.Release|x64.ActiveCfg = Release|x64
+		{7318F854-6FF5-4CD0-9C1E-663304553EA0}.Release|x64.Build.0 = Release|x64
+		{7318F854-6FF5-4CD0-9C1E-663304553EA0}.Release|x86.ActiveCfg = Release|Win32
+		{7318F854-6FF5-4CD0-9C1E-663304553EA0}.Release|x86.Build.0 = Release|Win32
+		{5A368636-7288-4613-95B4-89A3FA2F8ABF}.Debug|x64.ActiveCfg = Debug|x64
+		{5A368636-7288-4613-95B4-89A3FA2F8ABF}.Debug|x64.Build.0 = Debug|x64
+		{5A368636-7288-4613-95B4-89A3FA2F8ABF}.Debug|x86.ActiveCfg = Debug|Win32
+		{5A368636-7288-4613-95B4-89A3FA2F8ABF}.Debug|x86.Build.0 = Debug|Win32
+		{5A368636-7288-4613-95B4-89A3FA2F8ABF}.Release|x64.ActiveCfg = Release|x64
+		{5A368636-7288-4613-95B4-89A3FA2F8ABF}.Release|x64.Build.0 = Release|x64
+		{5A368636-7288-4613-95B4-89A3FA2F8ABF}.Release|x86.ActiveCfg = Release|Win32
+		{5A368636-7288-4613-95B4-89A3FA2F8ABF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4851F0D-8340-49DC-BA60-26AB9CCE0ADF}
+	EndGlobalSection
+EndGlobal
