@@ -7,7 +7,7 @@ RoTex is the custom-built game engine designed specifically for Project: Rogueli
 The engine, although rather barebones, supports a hierarchical entity system that is still heavily Work In Progress, alongside a grid-based placement and movement system for entities as well. You can even opt-out of grid usage if you'd like!
 
 # Compiling
-Open the SLN and press build. All dependencies *should* be included, if not, make an issue and I'll try to get it resolved by adding a `redist` folder to the `x64/Debug/` path. Thanks for checking out the project!
+Open the SLN and press build. All dependencies *should* be included, if not, make an issue and I'll try to get it resolved by adding a `redist` folder to the repo. Thanks for checking out the project!
 
 # Notes
 *images will eventually be uploaded to this repository for the sake of adding flavor to this README. Other than the information listed above, I am not sure what else to add here.*
