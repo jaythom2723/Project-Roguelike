@@ -6,7 +6,11 @@
 #include <SDL3/SDL.h>
 #include <SDL3_ttf/SDL_ttf.h>
 
+#include "game_state.h"
 #include "player.h"
+#include "cursor.h"
+
+GameState gstate = { 0 };
 
 void event_loop(SDL_Event& e);
 void update(double deltaTime);
@@ -22,10 +26,16 @@ int main()
 	
 	// aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaffffffffffffffffffffffffffffffff```` - coconut shrimp
 
+	gstate.cursorMode = false;
+
 	uint8_t cp437_str[] = { 0x01, 0x00 };
-	rotex::createEntity<Player>(RTVEC2FZERO, RTVec2<float>(1.f, 1.f), RTVEC2FZERO, true, true, cp437_str, RTCOL_GREEN);
-	RTGRIDMAP->setGridCell(RTVec2<int>(0, 0), RTENTITIES[0]);
-	RTENTITIES[0]->setPos(RTGRIDMAP->gridCellToWorldPosition(RTVec2<int>(0, 0)));
+	gstate.player = rotex::createEntity<Player>(RTVEC2FZERO, RTVec2<float>(1.f, 1.f), RTVEC2FZERO, true, true, 0, cp437_str, RTCOL_GREEN);
+	RTGRIDMAP->setGridCell(RTVec2<int>(0, 0), gstate.player);
+	gstate.player->setPos(RTGRIDMAP->gridCellToWorldPosition(RTVec2<int>(0, 0)));
+
+	gstate.cursor = rotex::createEntity<Cursor>(RTVEC2FZERO, RTVec2<float>(1.f, 1.f), RTVEC2FZERO, 1, rotex::loadImage("gfx/images/cursor.png"));
+	RTCURSORMAP->setGridCell(RTVec2<int>(RTGRIDMAP_COLS-1, RTGRIDMAP_ROWS-1), gstate.cursor);
+	gstate.cursor->setPos(RTCURSORMAP->gridCellToWorldPosition(RTVec2<int>(RTGRIDMAP_COLS - 1, RTGRIDMAP_ROWS - 1)));
 
 	std::uint64_t last, now;
 	double deltaTime;
@@ -95,6 +105,7 @@ void draw()
 	SDL_RenderClear(RTRENDERER->getHandle());
 
 	RTGRIDMAP->draw();
+	RTCURSORMAP->draw();
 
 	SDL_RenderPresent(RTRENDERER->getHandle());
 }

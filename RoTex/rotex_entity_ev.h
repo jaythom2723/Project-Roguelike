@@ -13,7 +13,8 @@ protected:
 	RTEventHandler* eventHandler;
 
 public:
-	ROTEXAPI RTEntityEV(SDL_EventType mask, RTVec2<float> pos, RTVec2<float> scale, RTVec2<float> rotation, bool solid, bool visible, uint8_t* cp437_str, RTColor color);
+	ROTEXAPI RTEntityEV(SDL_EventType mask, RTVec2<float> pos, RTVec2<float> scale, RTVec2<float> rotation, bool solid, bool visible, int collisionMaskLayer, uint8_t* cp437_str, RTColor color);
+	ROTEXAPI RTEntityEV(SDL_EventType mask, RTVec2<float> pos, RTVec2<float> scale, RTVec2<float> rotation, bool solid, bool visible, int collisionMaskLayer, SDL_Surface* image);
 	ROTEXAPI virtual ~RTEntityEV();
 
 	ROTEXAPI RTEventHandler* getEventHandler();

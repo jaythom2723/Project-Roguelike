@@ -1,0 +1,1127 @@
+﻿  rotex.cpp
+  rotex_color.cpp
+  rotex_display.cpp
+  rotex_entity.cpp
+  rotex_entity_ev.cpp
+  rotex_err.cpp
+  rotex_event_handler.cpp
+  rotex_grid_map.cpp
+  rotex_loader.cpp
+  rotex_render.cpp
+  rotex_texture.cpp
+  Generating Code...
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1402,5): warning MSB8012: TargetPath(E:\Programming\RLProj\x64\Debug\RoTex.dll) does not match the Linker's OutputFile property value (E:\Programming\RLProj\vendor\RoTex\RoTex.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+  Starting pass 1
+  Processed /DEFAULTLIB:msvcprtd
+  Processed /DEFAULTLIB:MSVCRTD
+  Processed /DEFAULTLIB:OLDNAMES
+  Searching libraries
+      Searching E:\Programming\RLProj\vendor\SDL3\SDL3.lib:
+        Found SDL_Init
+          Referenced in rotex.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_Quit
+          Referenced in rotex.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_MapRGBA
+          Referenced in rotex_color.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_GetRGBA
+          Referenced in rotex_color.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_GetPixelFormatDetails
+          Referenced in rotex_display.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_GetWindowPixelFormat
+          Referenced in rotex_display.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_CreateWindow
+          Referenced in rotex_display.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_GetError
+          Referenced in rotex_entity.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_RenderTexture
+          Referenced in rotex_entity.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_CreateRenderer
+          Referenced in rotex_render.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_DestroyRenderer
+          Referenced in rotex_render.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_DestroySurface
+          Referenced in rotex_texture.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_CreateTextureFromSurface
+          Referenced in rotex_texture.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_GetTextureSize
+          Referenced in rotex_texture.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_SetTextureBlendMode
+          Referenced in rotex_texture.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_DestroyTexture
+          Referenced in rotex_texture.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found __IMPORT_DESCRIPTOR_SDL3
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
+          Loaded SDL3.lib(SDL3.dll)
+        Found __NULL_IMPORT_DESCRIPTOR
+          Referenced in SDL3.lib(SDL3.dll)
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL3_NULL_THUNK_DATA
+          Referenced in SDL3.lib(SDL3.dll)
+          Loaded SDL3.lib(SDL3.dll)
+      Searching E:\Programming\RLProj\vendor\SDL3_image\SDL3_image.lib:
+        Found IMG_Load
+          Referenced in rotex_loader.obj
+          Loaded SDL3_image.lib(SDL3_image.dll)
+        Found __IMPORT_DESCRIPTOR_SDL3_image
+          Referenced in SDL3_image.lib(SDL3_image.dll)
+          Loaded SDL3_image.lib(SDL3_image.dll)
+        Found SDL3_image_NULL_THUNK_DATA
+          Referenced in SDL3_image.lib(SDL3_image.dll)
+          Loaded SDL3_image.lib(SDL3_image.dll)
+      Searching E:\Programming\RLProj\vendor\SDL3_ttf\SDL3_ttf.lib:
+        Found TTF_Init
+          Referenced in rotex.obj
+          Loaded SDL3_ttf.lib(SDL3_ttf.dll)
+        Found TTF_CloseFont
+          Referenced in rotex.obj
+          Loaded SDL3_ttf.lib(SDL3_ttf.dll)
+        Found TTF_OpenFont
+          Referenced in rotex_loader.obj
+          Loaded SDL3_ttf.lib(SDL3_ttf.dll)
+        Found TTF_CreateRendererTextEngine
+          Referenced in rotex_render.obj
+          Loaded SDL3_ttf.lib(SDL3_ttf.dll)
+        Found TTF_RenderText_Shaded
+          Referenced in rotex_texture.obj
+          Loaded SDL3_ttf.lib(SDL3_ttf.dll)
+        Found __IMPORT_DESCRIPTOR_SDL3_ttf
+          Referenced in SDL3_ttf.lib(SDL3_ttf.dll)
+          Referenced in SDL3_ttf.lib(SDL3_ttf.dll)
+          Referenced in SDL3_ttf.lib(SDL3_ttf.dll)
+          Referenced in SDL3_ttf.lib(SDL3_ttf.dll)
+          Referenced in SDL3_ttf.lib(SDL3_ttf.dll)
+          Loaded SDL3_ttf.lib(SDL3_ttf.dll)
+        Found SDL3_ttf_NULL_THUNK_DATA
+          Referenced in SDL3_ttf.lib(SDL3_ttf.dll)
+          Loaded SDL3_ttf.lib(SDL3_ttf.dll)
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\kernel32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\user32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\gdi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\winspool.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\comdlg32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\advapi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\shell32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\ole32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\oleaut32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\uuid.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbc32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbccp32.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\msvcprtd.lib:
+        Found "__declspec(dllimport) public: __cdecl std::_Lockit::_Lockit(int)" (__imp_??0_Lockit@std@@QEAA@H@Z)
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_loader.obj
+          Referenced in rotex_texture.obj
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_err.obj
+          Loaded msvcprtd.lib(MSVCP140D.dll)
+        Found "__declspec(dllimport) public: __cdecl std::_Lockit::~_Lockit(void)" (__imp_??1_Lockit@std@@QEAA@XZ)
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_loader.obj
+          Referenced in rotex_texture.obj
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_err.obj
+          Loaded msvcprtd.lib(MSVCP140D.dll)
+        Found "void __cdecl std::_Xlength_error(char const *)" (?_Xlength_error@std@@YAXPEBD@Z)
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Loaded msvcprtd.lib(MSVCP140D.dll)
+        Found __IMPORT_DESCRIPTOR_MSVCP140D
+          Referenced in msvcprtd.lib(MSVCP140D.dll)
+          Referenced in msvcprtd.lib(MSVCP140D.dll)
+          Referenced in msvcprtd.lib(MSVCP140D.dll)
+          Loaded msvcprtd.lib(MSVCP140D.dll)
+        Found MSVCP140D_NULL_THUNK_DATA
+          Referenced in msvcprtd.lib(MSVCP140D.dll)
+          Loaded msvcprtd.lib(MSVCP140D.dll)
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\MSVCRTD.lib:
+        Found "void * __cdecl operator new(unsigned __int64)" (??2@YAPEAX_K@Z)
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_entity_ev.obj
+          Loaded MSVCRTD.lib(new_scalar.obj)
+        Found "void __cdecl operator delete(void *,unsigned __int64)" (??3@YAXPEAX_K@Z)
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_loader.obj
+          Referenced in rotex_texture.obj
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_entity_ev.obj
+          Loaded MSVCRTD.lib(delete_scalar_size.obj)
+        Found _RTC_CheckStackVars
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_loader.obj
+          Referenced in rotex_texture.obj
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_err.obj
+          Loaded MSVCRTD.lib(stack.obj)
+        Found _RTC_InitBase
+          Referenced in rotex_loader.obj
+          Referenced in rotex_render.obj
+          Referenced in rotex_texture.obj
+          Referenced in rotex_entity_ev.obj
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex.obj
+          Referenced in rotex_color.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Loaded MSVCRTD.lib(init.obj)
+        Found __CheckForDebuggerJustMyCode
+          Referenced in rotex_loader.obj
+          Referenced in rotex_render.obj
+          Referenced in rotex_texture.obj
+          Referenced in rotex_entity_ev.obj
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex.obj
+          Referenced in rotex_color.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Loaded MSVCRTD.lib(debugger_jmc.obj)
+        Found __GSHandlerCheck
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_loader.obj
+          Referenced in rotex_texture.obj
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_err.obj
+          Loaded MSVCRTD.lib(gshandler.obj)
+        Found __GSHandlerCheck_EH4
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Loaded MSVCRTD.lib(gshandlereh4.obj)
+        Found __security_check_cookie
+          Referenced in MSVCRTD.lib(gshandler.obj)
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_loader.obj
+          Referenced in rotex_texture.obj
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_err.obj
+          Loaded MSVCRTD.lib(amdsecgs.obj)
+        Found "const type_info::`vftable'" (??_7type_info@@6B@)
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_entity_ev.obj
+          Loaded MSVCRTD.lib(std_type_info_static.obj)
+        Found __security_cookie
+          Referenced in MSVCRTD.lib(amdsecgs.obj)
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_loader.obj
+          Referenced in rotex_texture.obj
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_err.obj
+          Loaded MSVCRTD.lib(gs_cookie.obj)
+        Found _fltused
+          Referenced in rotex_texture.obj
+          Referenced in rotex.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_loader.obj
+          Loaded MSVCRTD.lib(fltused.obj)
+        Found "void __cdecl `eh vector destructor iterator'(void *,unsigned __int64,unsigned __int64,void (__cdecl*)(void *))" (??_M@YAXPEAX_K1P6AX0@Z@Z)
+          Referenced in rotex_entity.obj
+          Referenced in rotex_entity_ev.obj
+          Referenced in rotex_err.obj
+          Referenced in rotex_grid_map.obj
+          Loaded MSVCRTD.lib(ehvecdtr.obj)
+        Found "void __cdecl operator delete[](void *,unsigned __int64)" (??_V@YAXPEAX_K@Z)
+          Referenced in rotex_entity.obj
+          Referenced in rotex_entity_ev.obj
+          Loaded MSVCRTD.lib(delete_array_size.obj)
+        Found atexit
+          Referenced in rotex_err.obj
+          Loaded MSVCRTD.lib(utility.obj)
+        Found "void __cdecl `eh vector constructor iterator'(void *,unsigned __int64,unsigned __int64,void (__cdecl*)(void *),void (__cdecl*)(void *))" (??_L@YAXPEAX_K1P6AX0@Z2@Z)
+          Referenced in rotex_grid_map.obj
+          Loaded MSVCRTD.lib(ehvecctr.obj)
+        Found _DllMainCRTStartup
+          Loaded MSVCRTD.lib(dll_dllmain.obj)
+        Found "void __cdecl __scrt_throw_std_bad_alloc(void)" (?__scrt_throw_std_bad_alloc@@YAXXZ)
+          Referenced in MSVCRTD.lib(new_scalar.obj)
+          Loaded MSVCRTD.lib(throw_bad_alloc.obj)
+        Found "void __cdecl operator delete(void *)" (??3@YAXPEAX@Z)
+          Referenced in MSVCRTD.lib(delete_scalar_size.obj)
+          Loaded MSVCRTD.lib(delete_scalar.obj)
+        Found "void __cdecl _RTC_StackFailure(void *,char const *)" (?_RTC_StackFailure@@YAXPEAXPEBD@Z)
+          Referenced in MSVCRTD.lib(stack.obj)
+          Loaded MSVCRTD.lib(error.obj)
+        Found _RTC_SetErrorFuncW
+          Referenced in MSVCRTD.lib(init.obj)
+          Loaded MSVCRTD.lib(userapi.obj)
+        Found __report_gsfailure
+          Referenced in MSVCRTD.lib(amdsecgs.obj)
+          Loaded MSVCRTD.lib(gs_report.obj)
+        Found __guard_dispatch_icall_fptr
+          Referenced in MSVCRTD.lib(error.obj)
+          Referenced in MSVCRTD.lib(ehvecdtr.obj)
+          Referenced in MSVCRTD.lib(utility.obj)
+          Referenced in MSVCRTD.lib(ehvecctr.obj)
+          Referenced in MSVCRTD.lib(dll_dllmain.obj)
+          Loaded MSVCRTD.lib(guard_support.obj)
+        Found "void __cdecl operator delete[](void *)" (??_V@YAXPEAX@Z)
+          Referenced in MSVCRTD.lib(delete_array_size.obj)
+          Loaded MSVCRTD.lib(delete_array.obj)
+        Found __isa_available_init
+          Referenced in MSVCRTD.lib(utility.obj)
+          Loaded MSVCRTD.lib(cpu_disp.obj)
+        Found _get_startup_argv_mode
+          Referenced in MSVCRTD.lib(utility.obj)
+          Loaded MSVCRTD.lib(argv_mode.obj)
+        Found __scrt_is_ucrt_dll_in_use
+          Referenced in MSVCRTD.lib(utility.obj)
+          Loaded MSVCRTD.lib(ucrt_detection.obj)
+        Found __scrt_fastfail
+          Referenced in MSVCRTD.lib(utility.obj)
+          Referenced in MSVCRTD.lib(dll_dllmain.obj)
+          Loaded MSVCRTD.lib(utility_desktop.obj)
+        Found __security_init_cookie
+          Referenced in MSVCRTD.lib(dll_dllmain.obj)
+          Loaded MSVCRTD.lib(gs_support.obj)
+        Found DllMain
+          Referenced in MSVCRTD.lib(dll_dllmain.obj)
+          Loaded MSVCRTD.lib(dll_dllmain_stub.obj)
+        Found "void __cdecl __scrt_initialize_type_info(void)" (?__scrt_initialize_type_info@@YAXXZ)
+          Referenced in MSVCRTD.lib(dll_dllmain.obj)
+          Loaded MSVCRTD.lib(tncleanup.obj)
+        Found __scrt_initialize_default_local_stdio_options
+          Referenced in MSVCRTD.lib(dll_dllmain.obj)
+          Loaded MSVCRTD.lib(default_local_stdio_options.obj)
+        Found __scrt_get_dyn_tls_init_callback
+          Referenced in MSVCRTD.lib(dll_dllmain.obj)
+          Loaded MSVCRTD.lib(dyn_tls_init.obj)
+        Found _RTC_Initialize
+          Referenced in MSVCRTD.lib(dll_dllmain.obj)
+          Loaded MSVCRTD.lib(initsect.obj)
+        Found __xi_a
+          Referenced in MSVCRTD.lib(dll_dllmain.obj)
+          Loaded MSVCRTD.lib(initializers.obj)
+  Processed /DEFAULTLIB:kernel32.lib
+   Processed /DISALLOWLIB:msvcrt.lib
+   Processed /DISALLOWLIB:libcmt.lib
+   Processed /DISALLOWLIB:libcmtd.lib
+   Processed /DISALLOWLIB:vcruntime.lib
+  Processed /DEFAULTLIB:vcruntimed.lib
+   Processed /DISALLOWLIB:libvcruntime.lib
+   Processed /DISALLOWLIB:libvcruntimed.lib
+   Processed /DISALLOWLIB:ucrt.lib
+  Processed /DEFAULTLIB:ucrtd.lib
+   Processed /DISALLOWLIB:libucrt.lib
+   Processed /DISALLOWLIB:libucrtd.lib
+        Found "int __cdecl _RTC_GetSrcLine(unsigned char *,wchar_t *,unsigned long,int *,wchar_t *,unsigned long)" (?_RTC_GetSrcLine@@YAHPEAEPEA_WKPEAH1K@Z)
+          Referenced in MSVCRTD.lib(error.obj)
+          Loaded MSVCRTD.lib(pdblkup.obj)
+        Found _guard_dispatch_icall_nop
+          Referenced in MSVCRTD.lib(guard_support.obj)
+          Loaded MSVCRTD.lib(guard_dispatch.obj)
+        Found _guard_xfg_dispatch_icall_nop
+          Referenced in MSVCRTD.lib(guard_support.obj)
+          Loaded MSVCRTD.lib(guard_xfg_dispatch.obj)
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\OLDNAMES.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\vcruntimed.lib:
+        Found memcpy
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_err.obj
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found __std_exception_copy
+          Referenced in MSVCRTD.lib(throw_bad_alloc.obj)
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found __std_exception_destroy
+          Referenced in MSVCRTD.lib(throw_bad_alloc.obj)
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found _CxxThrowException
+          Referenced in MSVCRTD.lib(throw_bad_alloc.obj)
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found __CxxFrameHandler4
+          Referenced in rotex_texture.obj
+          Referenced in MSVCRTD.lib(gshandlereh4.obj)
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_loader.obj
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_entity_ev.obj
+          Loaded vcruntimed.lib(VCRUNTIME140_1D.dll)
+        Found memmove
+          Referenced in rotex_display.obj
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found memset
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found __C_specific_handler
+          Referenced in MSVCRTD.lib(dll_dllmain.obj)
+          Referenced in rotex_err.obj
+          Referenced in MSVCRTD.lib(ehvecdtr.obj)
+          Referenced in MSVCRTD.lib(utility.obj)
+          Referenced in MSVCRTD.lib(ehvecctr.obj)
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found __current_exception
+          Referenced in MSVCRTD.lib(ehvecdtr.obj)
+          Referenced in MSVCRTD.lib(utility_desktop.obj)
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found __current_exception_context
+          Referenced in MSVCRTD.lib(ehvecdtr.obj)
+          Referenced in MSVCRTD.lib(utility_desktop.obj)
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found __C_specific_handler_noexcept
+          Referenced in MSVCRTD.lib(error.obj)
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found __std_type_info_destroy_list
+          Referenced in MSVCRTD.lib(tncleanup.obj)
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found __vcrt_GetModuleFileNameW
+          Referenced in MSVCRTD.lib(pdblkup.obj)
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found __vcrt_GetModuleHandleW
+          Referenced in MSVCRTD.lib(pdblkup.obj)
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found __vcrt_LoadLibraryExW
+          Referenced in MSVCRTD.lib(pdblkup.obj)
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found __IMPORT_DESCRIPTOR_VCRUNTIME140D
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found __IMPORT_DESCRIPTOR_VCRUNTIME140_1D
+          Referenced in vcruntimed.lib(VCRUNTIME140_1D.dll)
+          Loaded vcruntimed.lib(VCRUNTIME140_1D.dll)
+        Found VCRUNTIME140D_NULL_THUNK_DATA
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
+        Found VCRUNTIME140_1D_NULL_THUNK_DATA
+          Referenced in vcruntimed.lib(VCRUNTIME140_1D.dll)
+          Loaded vcruntimed.lib(VCRUNTIME140_1D.dll)
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64\ucrtd.lib:
+        Found __imp__invoke_watson
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_loader.obj
+          Referenced in rotex_texture.obj
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_err.obj
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found strlen
+          Referenced in rotex.obj
+          Referenced in rotex_err.obj
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found __imp___acrt_iob_func
+          Referenced in rotex.obj
+          Referenced in rotex_entity.obj
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found __imp_calloc
+          Referenced in rotex.obj
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found __imp_free
+          Referenced in rotex.obj
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found __imp_malloc
+          Referenced in rotex.obj
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found __imp__CrtDbgReport
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_loader.obj
+          Referenced in rotex_texture.obj
+          Referenced in rotex.obj
+          Referenced in rotex_display.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_err.obj
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found __imp___stdio_common_vfprintf
+          Referenced in rotex.obj
+          Referenced in rotex_entity.obj
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found __imp_sqrtf
+          Referenced in rotex_entity.obj
+          Referenced in rotex_grid_map.obj
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found __imp_exit
+          Referenced in rotex_entity.obj
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found sqrt
+          Referenced in rotex_grid_map.obj
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _callnewh
+          Referenced in MSVCRTD.lib(new_scalar.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _CrtDbgReportW
+          Referenced in MSVCRTD.lib(init.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found terminate
+          Referenced in MSVCRTD.lib(ehvecdtr.obj)
+          Referenced in MSVCRTD.lib(utility_desktop.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _seh_filter_dll
+          Referenced in MSVCRTD.lib(utility.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _configure_narrow_argv
+          Referenced in MSVCRTD.lib(utility.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _initialize_narrow_environment
+          Referenced in MSVCRTD.lib(utility.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _initialize_onexit_table
+          Referenced in MSVCRTD.lib(utility.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _register_onexit_function
+          Referenced in MSVCRTD.lib(utility.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _execute_onexit_table
+          Referenced in MSVCRTD.lib(utility.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _crt_atexit
+          Referenced in MSVCRTD.lib(utility.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _crt_at_quick_exit
+          Referenced in MSVCRTD.lib(utility.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _cexit
+          Referenced in MSVCRTD.lib(utility.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _initterm
+          Referenced in MSVCRTD.lib(dll_dllmain.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _initterm_e
+          Referenced in MSVCRTD.lib(dll_dllmain.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _free_dbg
+          Referenced in MSVCRTD.lib(delete_scalar.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found strcpy_s
+          Referenced in MSVCRTD.lib(error.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found strcat_s
+          Referenced in MSVCRTD.lib(error.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found __stdio_common_vsprintf_s
+          Referenced in MSVCRTD.lib(error.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _wmakepath_s
+          Referenced in MSVCRTD.lib(pdblkup.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found _wsplitpath_s
+          Referenced in MSVCRTD.lib(pdblkup.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found wcscpy_s
+          Referenced in MSVCRTD.lib(pdblkup.obj)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found __IMPORT_DESCRIPTOR_ucrtbased
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Loaded ucrtd.lib(ucrtbased.dll)
+        Found ucrtbased_NULL_THUNK_DATA
+          Referenced in ucrtd.lib(ucrtbased.dll)
+          Loaded ucrtd.lib(ucrtbased.dll)
+      Searching E:\Programming\RLProj\vendor\SDL3\SDL3.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_image\SDL3_image.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_ttf\SDL3_ttf.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\kernel32.lib:
+        Found __imp_GetCurrentThreadId
+          Referenced in MSVCRTD.lib(debugger_jmc.obj)
+          Referenced in MSVCRTD.lib(gs_support.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_IsDebuggerPresent
+          Referenced in MSVCRTD.lib(error.obj)
+          Referenced in MSVCRTD.lib(utility_desktop.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_RaiseException
+          Referenced in MSVCRTD.lib(error.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_MultiByteToWideChar
+          Referenced in MSVCRTD.lib(error.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_WideCharToMultiByte
+          Referenced in MSVCRTD.lib(error.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_RtlCaptureContext
+          Referenced in MSVCRTD.lib(gs_report.obj)
+          Referenced in MSVCRTD.lib(utility_desktop.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_RtlLookupFunctionEntry
+          Referenced in MSVCRTD.lib(gs_report.obj)
+          Referenced in MSVCRTD.lib(utility_desktop.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_RtlVirtualUnwind
+          Referenced in MSVCRTD.lib(gs_report.obj)
+          Referenced in MSVCRTD.lib(utility_desktop.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_UnhandledExceptionFilter
+          Referenced in MSVCRTD.lib(gs_report.obj)
+          Referenced in MSVCRTD.lib(utility_desktop.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_SetUnhandledExceptionFilter
+          Referenced in MSVCRTD.lib(gs_report.obj)
+          Referenced in MSVCRTD.lib(utility_desktop.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_GetCurrentProcess
+          Referenced in MSVCRTD.lib(gs_report.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_TerminateProcess
+          Referenced in MSVCRTD.lib(gs_report.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_IsProcessorFeaturePresent
+          Referenced in MSVCRTD.lib(gs_report.obj)
+          Referenced in MSVCRTD.lib(utility_desktop.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_GetStartupInfoW
+          Referenced in MSVCRTD.lib(utility_desktop.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_GetModuleHandleW
+          Referenced in MSVCRTD.lib(utility_desktop.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_QueryPerformanceCounter
+          Referenced in MSVCRTD.lib(gs_support.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_GetCurrentProcessId
+          Referenced in MSVCRTD.lib(gs_support.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_GetSystemTimeAsFileTime
+          Referenced in MSVCRTD.lib(gs_support.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_DisableThreadLibraryCalls
+          Referenced in MSVCRTD.lib(dll_dllmain_stub.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_InitializeSListHead
+          Referenced in MSVCRTD.lib(tncleanup.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_GetLastError
+          Referenced in MSVCRTD.lib(pdblkup.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_HeapAlloc
+          Referenced in MSVCRTD.lib(pdblkup.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_HeapFree
+          Referenced in MSVCRTD.lib(pdblkup.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_GetProcessHeap
+          Referenced in MSVCRTD.lib(pdblkup.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_VirtualQuery
+          Referenced in MSVCRTD.lib(pdblkup.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_FreeLibrary
+          Referenced in MSVCRTD.lib(pdblkup.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __imp_GetProcAddress
+          Referenced in MSVCRTD.lib(pdblkup.obj)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found __IMPORT_DESCRIPTOR_KERNEL32
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Loaded kernel32.lib(KERNEL32.dll)
+        Found KERNEL32_NULL_THUNK_DATA
+          Referenced in kernel32.lib(KERNEL32.dll)
+          Loaded kernel32.lib(KERNEL32.dll)
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\user32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\gdi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\winspool.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\comdlg32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\advapi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\shell32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\ole32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\oleaut32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\uuid.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbc32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbccp32.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\msvcprtd.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\MSVCRTD.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\OLDNAMES.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\vcruntimed.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64\ucrtd.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3\SDL3.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_image\SDL3_image.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_ttf\SDL3_ttf.lib:
+  Finished searching libraries
+  Generating .exp file
+     Creating library E:\Programming\RLProj\x64\Debug\RoTex.lib and object E:\Programming\RLProj\x64\Debug\RoTex.exp
+  Finished generating .exp file
+  Searching libraries
+      Searching E:\Programming\RLProj\vendor\SDL3\SDL3.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_image\SDL3_image.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_ttf\SDL3_ttf.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\kernel32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\user32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\gdi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\winspool.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\comdlg32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\advapi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\shell32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\ole32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\oleaut32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\uuid.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbc32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbccp32.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\msvcprtd.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\MSVCRTD.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\OLDNAMES.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\vcruntimed.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64\ucrtd.lib:
+  Finished searching libraries
+  Searching libraries
+      Searching E:\Programming\RLProj\vendor\SDL3\SDL3.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_image\SDL3_image.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_ttf\SDL3_ttf.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\kernel32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\user32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\gdi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\winspool.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\comdlg32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\advapi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\shell32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\ole32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\oleaut32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\uuid.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbc32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbccp32.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\msvcprtd.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\MSVCRTD.lib:
+        Found __scrt_stub_for_acrt_initialize
+          Loaded MSVCRTD.lib(ucrt_stubs.obj)
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\OLDNAMES.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\vcruntimed.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64\ucrtd.lib:
+  Finished searching libraries
+  Searching libraries
+      Searching E:\Programming\RLProj\vendor\SDL3\SDL3.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_image\SDL3_image.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_ttf\SDL3_ttf.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\kernel32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\user32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\gdi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\winspool.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\comdlg32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\advapi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\shell32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\ole32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\oleaut32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\uuid.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbc32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbccp32.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\msvcprtd.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\MSVCRTD.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\OLDNAMES.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\vcruntimed.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64\ucrtd.lib:
+  Finished searching libraries
+  Searching libraries
+      Searching E:\Programming\RLProj\vendor\SDL3\SDL3.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_image\SDL3_image.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_ttf\SDL3_ttf.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\kernel32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\user32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\gdi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\winspool.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\comdlg32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\advapi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\shell32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\ole32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\oleaut32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\uuid.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbc32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbccp32.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\msvcprtd.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\MSVCRTD.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\OLDNAMES.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\vcruntimed.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64\ucrtd.lib:
+  Finished searching libraries
+  Finished pass 1
+  Searching libraries
+      Searching E:\Programming\RLProj\vendor\SDL3\SDL3.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_image\SDL3_image.lib:
+      Searching E:\Programming\RLProj\vendor\SDL3_ttf\SDL3_ttf.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\kernel32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\user32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\gdi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\winspool.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\comdlg32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\advapi32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\shell32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\ole32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\oleaut32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\uuid.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbc32.lib:
+      Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbccp32.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\msvcprtd.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\MSVCRTD.lib:
+        Found _load_config_used
+          Loaded MSVCRTD.lib(loadcfg.obj)
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\OLDNAMES.lib:
+      Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\vcruntimed.lib:
+        Found __guard_memcpy_fptr
+          Referenced in MSVCRTD.lib(loadcfg.obj)
+          Loaded vcruntimed.lib(softmemtag.obj)
+  Finished searching libraries
+  Invoking rc.exe:
+   /v
+   /x
+   /fo
+   "C:\Users\pengu\AppData\Local\Temp\lnk{6598C26F-3880-45A7-8FA5-E77AC445BAAD}.tmp"
+   "C:\Users\pengu\AppData\Local\Temp\lnk{A7777136-7A70-481B-A240-7719AC1E8052}.tmp"
+  Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
+  
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  
+  Using codepage 1252 as default
+  Creating C:\Users\pengu\AppData\Local\Temp\lnk{6598C26F-3880-45A7-8FA5-E77AC445BAAD}.tmp
+  
+  
+  C:\Users\pengu\AppData\Local\Temp\lnk{A7777136-7A70-481B-A240-7719AC1E8052}.tmp.
+  Writing 24:2,	lang:0x409,	size 145
+  Invoking cvtres.exe:
+   /machine:amd64
+   /verbose
+   /out:"C:\Users\pengu\AppData\Local\Temp\lnk{5DBD5722-F472-4669-837C-CB8CFD9BE5E1}.tmp"
+   /readonly
+   "C:\Users\pengu\AppData\Local\Temp\lnk{6598C26F-3880-45A7-8FA5-E77AC445BAAD}.tmp"
+  Microsoft (R) Windows Resource To Object Converter Version 14.44.35209.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  adding resource. type:MANIFEST, name:2, language:0x0409, flags:0x30, size:145
+  Unused libraries:
+    C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\user32.lib
+    C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\gdi32.lib
+    C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\winspool.lib
+    C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\comdlg32.lib
+    C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\advapi32.lib
+    C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\shell32.lib
+    C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\ole32.lib
+    C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\oleaut32.lib
+    C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\uuid.lib
+    C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbc32.lib
+    C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbccp32.lib
+    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\OLDNAMES.lib
+  Starting pass 2
+       * linker generated manifest res *
+       RoTex.exp
+       rotex_texture.obj
+       rotex_render.obj
+       rotex_loader.obj
+       rotex_grid_map.obj
+       rotex_event_handler.obj
+       rotex_err.obj
+       rotex_entity_ev.obj
+       rotex_entity.obj
+       rotex_display.obj
+       rotex_color.obj
+       rotex.obj
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
+       SDL3_image.lib(SDL3_image.dll)
+       SDL3_image.lib(SDL3_image.dll)
+       SDL3_image.lib(SDL3_image.dll)
+       SDL3_ttf.lib(SDL3_ttf.dll)
+       SDL3_ttf.lib(SDL3_ttf.dll)
+       SDL3_ttf.lib(SDL3_ttf.dll)
+       SDL3_ttf.lib(SDL3_ttf.dll)
+       SDL3_ttf.lib(SDL3_ttf.dll)
+       SDL3_ttf.lib(SDL3_ttf.dll)
+       SDL3_ttf.lib(SDL3_ttf.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       kernel32.lib(KERNEL32.dll)
+       msvcprtd.lib(MSVCP140D.dll)
+       msvcprtd.lib(MSVCP140D.dll)
+       msvcprtd.lib(MSVCP140D.dll)
+       msvcprtd.lib(MSVCP140D.dll)
+       msvcprtd.lib(MSVCP140D.dll)
+       MSVCRTD.lib(argv_mode.obj)
+       MSVCRTD.lib(default_local_stdio_options.obj)
+       MSVCRTD.lib(fltused.obj)
+       MSVCRTD.lib(ehvecctr.obj)
+       MSVCRTD.lib(ehvecdtr.obj)
+       MSVCRTD.lib(std_type_info_static.obj)
+       MSVCRTD.lib(tncleanup.obj)
+       MSVCRTD.lib(delete_array.obj)
+       MSVCRTD.lib(delete_array_size.obj)
+       MSVCRTD.lib(delete_scalar.obj)
+       MSVCRTD.lib(delete_scalar_size.obj)
+       MSVCRTD.lib(new_scalar.obj)
+       MSVCRTD.lib(throw_bad_alloc.obj)
+       MSVCRTD.lib(dll_dllmain.obj)
+       MSVCRTD.lib(dll_dllmain_stub.obj)
+       MSVCRTD.lib(initializers.obj)
+       MSVCRTD.lib(utility.obj)
+       MSVCRTD.lib(ucrt_stubs.obj)
+       MSVCRTD.lib(gs_cookie.obj)
+       MSVCRTD.lib(gs_report.obj)
+       MSVCRTD.lib(gs_support.obj)
+       MSVCRTD.lib(debugger_jmc.obj)
+       MSVCRTD.lib(guard_support.obj)
+       MSVCRTD.lib(loadcfg.obj)
+       MSVCRTD.lib(dyn_tls_init.obj)
+       MSVCRTD.lib(ucrt_detection.obj)
+       MSVCRTD.lib(cpu_disp.obj)
+       MSVCRTD.lib(utility_desktop.obj)
+       MSVCRTD.lib(error.obj)
+       MSVCRTD.lib(init.obj)
+       MSVCRTD.lib(initsect.obj)
+       MSVCRTD.lib(pdblkup.obj)
+       MSVCRTD.lib(stack.obj)
+       MSVCRTD.lib(userapi.obj)
+       MSVCRTD.lib(gshandler.obj)
+       MSVCRTD.lib(gshandlereh4.obj)
+       MSVCRTD.lib(amdsecgs.obj)
+       MSVCRTD.lib(guard_dispatch.obj)
+       MSVCRTD.lib(guard_xfg_dispatch.obj)
+       vcruntimed.lib(VCRUNTIME140_1D.dll)
+       vcruntimed.lib(VCRUNTIME140_1D.dll)
+       vcruntimed.lib(VCRUNTIME140_1D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
+       vcruntimed.lib(softmemtag.obj)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+       ucrtd.lib(ucrtbased.dll)
+  Finished pass 2
+  RoTex.vcxproj -> E:\Programming\RLProj\x64\Debug\RoTex.dll
+  E:\Programming\RLProj\RoTex\rotex.h
+  E:\Programming\RLProj\RoTex\rotex_color.h
+  E:\Programming\RLProj\RoTex\rotex_defs.h
+  E:\Programming\RLProj\RoTex\rotex_display.h
+  E:\Programming\RLProj\RoTex\rotex_entity.h
+  E:\Programming\RLProj\RoTex\rotex_entity_ev.h
+  E:\Programming\RLProj\RoTex\rotex_err.h
+  E:\Programming\RLProj\RoTex\rotex_event_handler.h
+  E:\Programming\RLProj\RoTex\rotex_grid_map.h
+  E:\Programming\RLProj\RoTex\rotex_loader.h
+  E:\Programming\RLProj\RoTex\rotex_render.h
+  E:\Programming\RLProj\RoTex\rotex_texture.h
+  E:\Programming\RLProj\RoTex\rotex_vec.h
+         13 file(s) copied.
+          1 file(s) copied.

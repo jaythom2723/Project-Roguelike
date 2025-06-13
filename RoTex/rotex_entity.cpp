@@ -2,14 +2,26 @@
 
 #include "rotex.h"
 
-RTEntity::RTEntity(RTVec2<float> pos, RTVec2<float> scale, RTVec2<float> rotation, bool solid, bool visible, uint8_t* cp437_str, RTColor color)
+RTEntity::RTEntity(RTVec2<float> pos, RTVec2<float> scale, RTVec2<float> rotation, bool solid, bool visible, int collisionMaskLayer, uint8_t* cp437_str, RTColor color)
 {
 	this->pos = pos;
 	this->scale = scale;
 	this->rotation = rotation;
 	this->solid = solid;
 	this->visible = visible;
+	this->collisionMask = collisionMaskLayer;
 	texture = new RTTexture(RTMAINFONT, rotex::convertString(cp437_str), color);
+}
+
+RTEntity::RTEntity(RTVec2<float> pos, RTVec2<float> scale, RTVec2<float> rotation, bool solid, bool visible, int collisionMaskLayer, SDL_Surface* image)
+{
+	this->pos = pos;
+	this->scale = scale;
+	this->rotation = rotation;
+	this->solid = solid;
+	this->visible = visible;
+	this->collisionMask = collisionMaskLayer;
+	texture = new RTTexture(image);
 }
 
 RTEntity::~RTEntity()
@@ -105,6 +117,16 @@ RTVec2<float>& RTEntity::getScale()
 RTVec2<float>& RTEntity::getRotation()
 {
 	return rotation;
+}
+
+const int& RTEntity::getCollisionMask()
+{
+	return collisionMask;
+}
+
+RTGridCell* RTEntity::getCell()
+{
+	return curCell;
 }
 
 void RTEntity::update(double deltaTime)

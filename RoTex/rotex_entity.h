@@ -12,6 +12,8 @@ class RTEntity
 protected:
 	int id;
 
+	int collisionMask;
+
 	bool visible;
 	bool solid;
 
@@ -27,7 +29,8 @@ protected:
 
 public:
 	RTEntity() {}
-	ROTEXAPI RTEntity(RTVec2<float> pos, RTVec2<float> scale, RTVec2<float> rotation, bool solid, bool visible, uint8_t* cp437_str, RTColor color);
+	ROTEXAPI RTEntity(RTVec2<float> pos, RTVec2<float> scale, RTVec2<float> rotation, bool solid, bool visible, int collisionMaskLayer, uint8_t* cp437_str, RTColor color);
+	ROTEXAPI RTEntity(RTVec2<float> pos, RTVec2<float> scale, RTVec2<float> rotation, bool solid, bool visible, int collisionMaskLayer, SDL_Surface* img);
 	ROTEXAPI virtual ~RTEntity();
 
 	ROTEXAPI void setVisible(bool value);
@@ -50,6 +53,8 @@ public:
 	ROTEXAPI RTVec2<float>& getPos();
 	ROTEXAPI RTVec2<float>& getScale();
 	ROTEXAPI RTVec2<float>& getRotation();
+	ROTEXAPI const int& getCollisionMask();
+	ROTEXAPI RTGridCell* getCell();
 
 	ROTEXAPI virtual void update(double deltaTime);
 	ROTEXAPI virtual void draw();

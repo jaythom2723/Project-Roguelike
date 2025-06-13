@@ -24,6 +24,7 @@ public:
 	ROTEXAPI void popFirst();
 	ROTEXAPI void pushEvent(const rotex::RTEvent event);
 	ROTEXAPI bool isEmpty();
+	ROTEXAPI void clearAll();
 };
 
 #endif // ROTEX_EVENT_HANDLER_H

@@ -37,6 +37,15 @@ public:
 
 		return RTVec2(x / magnitude, y / magnitude);
 	}
+
+	inline bool operator==(const RTVec2<T>& b) const
+	{
+		return (x == b.x && y == b.y);
+	}
+
+	inline RTVec2<T> operator-(T scalar) const {
+		return RTVec2<T>(x - scalar, y - scalar);
+	}
 };
 
 template<typename T>

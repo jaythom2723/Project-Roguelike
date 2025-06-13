@@ -4,7 +4,7 @@
 
 RTTexture::RTTexture(TTF_Font* f, std::string text, RTColor color)
 {
-	SDL_Surface* txtSurface = TTF_RenderText_Shaded(f, text.c_str(), text.size(), color.getRaw(), RTCOL_BLACK.getRaw());
+	SDL_Surface* txtSurface = TTF_RenderText_Shaded(f, text.c_str(), text.size(), color.getRaw(), RTCOL_CLEAR.getRaw());
 	if (txtSurface == nullptr)
 	{
 		rotex::pushError(rotex::RTErr::SURFACE_CREATE_ERR);
@@ -20,6 +20,20 @@ RTTexture::RTTexture(TTF_Font* f, std::string text, RTColor color)
 
 	SDL_SetTextureBlendMode(raw, SDL_BLENDMODE_BLEND);
 	SDL_DestroySurface(txtSurface);
+	SDL_GetTextureSize(raw, &width, &height);
+}
+
+RTTexture::RTTexture(SDL_Surface* img)
+{
+	raw = SDL_CreateTextureFromSurface(RTRENDERER->getHandle(), img);
+	if (raw == nullptr)
+	{
+		rotex::pushError(rotex::RTErr::TEXTURE_CREATE_ERR);
+		return;
+	}
+
+	SDL_SetTextureBlendMode(raw, SDL_BLENDMODE_BLEND);
+	SDL_DestroySurface(img);
 	SDL_GetTextureSize(raw, &width, &height);
 }
 

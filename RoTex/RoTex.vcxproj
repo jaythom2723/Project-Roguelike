@@ -115,7 +115,7 @@
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>E:\Programming\RLProj\vendor\SDL3_ttf\include;E:\Programming\RLProj\vendor\SDL3_image\include;E:\Programming\RLProj\vendor\SDL3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Programming\RLProj\RoTex;E:\Programming\RLProj\vendor\SDL3_ttf\include;E:\Programming\RLProj\vendor\SDL3_image\include;E:\Programming\RLProj\vendor\SDL3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

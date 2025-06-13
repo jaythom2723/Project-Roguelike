@@ -132,6 +132,7 @@ copy "$(SolutionDir)vendor\SDL3_image\SDL3_image.dll" "$(SolutionDir)$(IntDir)"<
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cursor.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="player.cpp" />
   </ItemGroup>
@@ -146,6 +147,8 @@ copy "$(SolutionDir)vendor\SDL3_image\SDL3_image.dll" "$(SolutionDir)$(IntDir)"<
     <Font Include="Mx437_IBM_BIOS.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cursor.h" />
+    <ClInclude Include="game_state.h" />
     <ClInclude Include="player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

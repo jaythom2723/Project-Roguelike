@@ -1,0 +1,23 @@
+﻿  rotex.cpp
+  rotex_color.cpp
+  rotex_display.cpp
+  rotex_entity.cpp
+E:\Programming\RLProj\RoTex\rotex.cpp(156,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+E:\Programming\RLProj\RoTex\rotex_color.cpp(22,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+E:\Programming\RLProj\RoTex\rotex_display.cpp(67,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+E:\Programming\RLProj\RoTex\rotex_entity.cpp(132,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  rotex_entity_ev.cpp
+E:\Programming\RLProj\RoTex\rotex_entity_ev.cpp(18,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  rotex_err.cpp
+E:\Programming\RLProj\RoTex\rotex_err.cpp(38,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  rotex_event_handler.cpp
+E:\Programming\RLProj\RoTex\rotex_event_handler.cpp(33,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  rotex_grid_map.cpp
+E:\Programming\RLProj\RoTex\rotex_grid_map.cpp(121,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  rotex_loader.cpp
+E:\Programming\RLProj\RoTex\rotex_loader.cpp(16,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  rotex_render.cpp
+E:\Programming\RLProj\RoTex\rotex_render.cpp(34,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  rotex_texture.cpp
+E:\Programming\RLProj\RoTex\rotex_texture.cpp(45,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  Generating Code...

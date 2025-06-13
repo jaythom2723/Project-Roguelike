@@ -115,6 +115,10 @@ bool rotex::init(const std::string title, const int w, const int h)
 	if (ctx->gridMap == nullptr)
 		return rotex::pushErrRet(rotex::RTErr::GRIDMAP_CREATE_ERR);
 
+	ctx->cursorMap = std::make_unique<RTGridMap>();
+	if (ctx->cursorMap == nullptr)
+		return rotex::pushErrRet(rotex::RTErr::GRIDMAP_CREATE_ERR);
+
 	// initialize SDL3_ttf
 	if (!TTF_Init())
 		return rotex::pushErrRet(rotex::RTErr::TTF_INIT_ERR);

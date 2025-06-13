@@ -20,6 +20,7 @@ private:
 public:
 	RTTexture() {}
 	ROTEXAPI RTTexture(TTF_Font* f, std::string text, RTColor color);
+	ROTEXAPI RTTexture(SDL_Surface* img);
 	ROTEXAPI ~RTTexture();
 
 	ROTEXAPI SDL_Texture* getRaw();

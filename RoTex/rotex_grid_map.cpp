@@ -63,23 +63,30 @@ void RTGridMap::moveGridCell(const RTVec2<int> a, const RTVec2<int> b)
 		return;
 	
 	RTGridCell* cell1, * cell2;
+	int cMask1, cMask2;
+
+	if (a == b)
+		return;
 
 	cell1 = &(map[a.y][a.x]);
 	cell2 = &(map[b.y][b.x]);
+	cMask1 = cell1->entity->getCollisionMask();
+	cMask2 = cell2->entity ? cell2->entity->getCollisionMask() : -1;
 
-	if (!cell2->passThrough)
+	if (cMask1 == cMask2 && !cell2->passThrough)
 		return;
 
-	printf("should move\n");
-	printf("(%d,%d)\n", b.x, b.y);
-
 	cell2->entity = cell1->entity;
-	cell2->passThrough = !cell2->entity->isSolid();
+	if (cell2->entity == nullptr)
+		return;
+	
+	cell2->passThrough = cell2->entity->isSolid();
+	cell2->passThrough = cell2->entity ? !cell2->entity->isSolid() : true;
 	cell2->entity->setPos(cell2->worldPos);
 	cell2->entity->setCell(cell2);
 
-	cell1->entity = nullptr;
 	cell1->passThrough = true;
+	cell1->entity = nullptr;
 }
 
 bool RTGridMap::isGridCellPassThrough(const RTVec2<int> coord)
@@ -112,9 +119,11 @@ void RTGridMap::draw()
 			if (cell->entity != nullptr && cell->entity->isVisible())
 				cell->entity->draw();
 
+			/*
 			SDL_SetRenderDrawColor(RTRENDERER->getHandle(), 0xff, 0xff, 0xff, 0xff);
 			SDL_RenderPoint(RTRENDERER->getHandle(), cell->worldPos.x, cell->worldPos.y);
 			SDL_SetRenderDrawColor(RTRENDERER->getHandle(), 0x00, 0x00, 0x00, 0xff);
+			*/
 		}
 	}
 }

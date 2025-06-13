@@ -30,6 +30,7 @@
 #define RTMAINFONT rotex::getContext()->font
 #define RTENTITIES rotex::getContext()->entityRegistry
 #define RTGRIDMAP rotex::getContext()->gridMap
+#define RTCURSORMAP rotex::getContext()->cursorMap
 
 struct RTContext
 {
@@ -37,6 +38,7 @@ public:
 	std::unique_ptr<RTDisplay> display;
 	std::unique_ptr<RTRenderer> renderer;
 	std::unique_ptr<RTGridMap> gridMap;
+	std::unique_ptr<RTGridMap> cursorMap;
 	std::vector<std::shared_ptr<RTEntity>> entityRegistry;
 	TTF_Font* font;
 };
@@ -58,13 +60,13 @@ namespace rotex
 	}
 
 	template<typename T, typename... Args>
-	bool createEntity(Args&&... args)
+	std::shared_ptr<T> createEntity(Args&&... args)
 	{
 		static_assert(std::is_base_of<RTEntity, T>::value, "T must derive RTEntity");
 
 		std::shared_ptr<T> ent = std::make_shared<T>(std::forward<Args>(args)...);
 		RTENTITIES.push_back(std::dynamic_pointer_cast<RTEntity>(ent));
-		return true;
+		return ent;
 	}
 }
 

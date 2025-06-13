@@ -30,3 +30,12 @@ bool RTEventHandler::isEmpty()
 {
 	return event_queue.empty();
 }
+
+void RTEventHandler::clearAll()
+{
+	int i;
+	for (i = 0; i < event_queue.size(); i++)
+	{
+		event_queue.pop();
+	}
+}

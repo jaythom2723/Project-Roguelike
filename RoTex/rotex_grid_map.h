@@ -15,7 +15,7 @@ class RTEntity;
 struct RTGridCell
 {
 public:
-	std::shared_ptr<RTEntity> entity = nullptr;
+	std::shared_ptr<RTEntity> entity;
 	bool passThrough = true;
 	RTVec2<int> gridPos = RTVec2<int>(0, 0);
 	RTVec2<float> worldPos = RTVec2<float>(0.f, 0.f);
