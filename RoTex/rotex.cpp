@@ -8,6 +8,8 @@
 #include <cstring>
 #include <memory>
 
+// used in conjunction with rotex::convertString
+// lookup table containing 16-bit unicode characters for CP437 to Unicode conversion
 static const uint16_t cp437_to_unicode[256] = {
 	0x0000, 0x263A, 0x263B, 0x2665, 0x2666, 0x2663, 0x2660, 0x2022,
 	0x25D8, 0x25CB, 0x25D9, 0x2642, 0x2640, 0x266A, 0x266B, 0x263C,
@@ -43,6 +45,8 @@ static const uint16_t cp437_to_unicode[256] = {
 	0x00B0, 0x2219, 0x00B7, 0x221A, 0x207F, 0x00B2, 0x25A0, 0x00A0
 };
 
+// encodes a single 16-bit unicode character into an 8-bit utf-8 character
+// stores the result in char* out, returns number of bytes in the new string.
 int encode_utf8(uint32_t codepoint, char* out)
 {
 	if (codepoint <= 0x7F)
@@ -67,18 +71,26 @@ int encode_utf8(uint32_t codepoint, char* out)
 	return 0; // unsupported
 }
 
+// convert a cp437 encoded string into a utf8 encoded string
 char* cp437_to_utf8_string(const uint8_t* input)
 {
 	using namespace std;
 	size_t len = strlen((const char*)input);
 	char* utf8 = (char*)malloc(len * 4 + 1);
+	if (utf8 == nullptr) // if we can't allocate memory, quit.
+	{
+		std::printf("Could not allocate enough memory for conversion!\n");
+		std::exit(-4);
+	}
+
+	// create a temp variable so we don't have to worry about resetting the utf8 pointer
 	char* out = utf8;
 
 	for (size_t i = 0; i < len; ++i)
 	{
-		uint16_t unicode = cp437_to_unicode[input[i]];
-		int bytes = encode_utf8(unicode, out);
-		out += bytes;
+		uint16_t unicode = cp437_to_unicode[input[i]]; // get the associated 16-bit Unicode character
+		int bytes = encode_utf8(unicode, out); // encode it into utf-8, returns size in bytes
+		out += bytes; // move over N bytes
 	}
 
 	*out = '\0';
@@ -128,24 +140,24 @@ bool rotex::init(const std::string title, const int w, const int h)
 	ctx->font = rotex::loadFont("gfx/fonts/Mx437_IBM_BIOS.ttf", 16.f);
 	if (ctx->font == nullptr)
 	{
-		std::printf("Font is NULL!\n");
-		return rotex::pushErrRet(rotex::RTErr::ASSET_LOAD_FAILURE_ERR);
+		std::printf("%s > mainFont is NULL!\n", rotex::getError().c_str());
+		return false;
 	}
 
 	// initialize the header font
-	ctx->headerFont = rotex::loadFont("gfx/fonts/Mx437_Robotron_A7100.ttf", 20.5f);
+	ctx->headerFont = rotex::loadFont("gfx/fonts/Mx437_Robotron_A7100.ttf", 32.f);
 	if (ctx->headerFont == nullptr)
 	{
-		std::printf("headerFont is NULL\n");
-		return rotex::pushErrRet(rotex::RTErr::ASSET_LOAD_FAILURE_ERR);
+		std::printf("%s > headerFont is NULL!\n", rotex::getError().c_str());
+		return false;
 	}
 
 	// initialize the GUI font
 	ctx->guiFont = rotex::loadFont("gfx/fonts/Mx437_Robotron_A7100.ttf", 16.f);
 	if (ctx->guiFont == nullptr)
 	{
-		std::printf("guiFont is NULL\n");
-		return rotex::pushErrRet(rotex::RTErr::ASSET_LOAD_FAILURE_ERR);
+		std::printf("%s > guiFont is NULL!\n", rotex::getError().c_str());
+		return false;
 	}
 
 	return true;
@@ -175,6 +187,7 @@ RTContext* rotex::getContext()
 	return ctx;
 }
 
+// convert a string from CP437 encoding to UTF-8 encoding.
 std::string rotex::convertString(uint8_t* cp437_str)
 {
 	char* tmp = cp437_to_utf8_string(cp437_str);

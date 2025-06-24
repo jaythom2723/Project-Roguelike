@@ -29,9 +29,9 @@ RTGUIText::~RTGUIText()
 
 void RTGUIText::setNewTextAt(TTF_Font* font, std::string text, RTColor color, int index)
 {
-	if (textures[index] != nullptr)
+	if (textures[index] != nullptr) // don't try to delete something that doesn't already exist
 		delete textures[index];
-	textures[index] = new RTTexture(font, text, color);
+	textures[index] = new RTTexture(font, text, color); // allocate a new texture to be made at `index`
 }
 
 std::vector<RTTexture*> RTGUIText::getTextures()
@@ -44,13 +44,14 @@ RTTexture* RTGUIText::getTextureAt(int i)
 	return textures[i];
 }
 
+// get the sum of all the widths in the textures array and return it
 float RTGUIText::getWidth()
 {
 	float ret = 0.f;
 
-	for (auto tex : textures)
+	for (auto tex : textures) 
 	{
-		if (tex == nullptr)
+		if (tex == nullptr) // if we hit a nullptr, break the loop
 			break;
 
 		ret += tex->getWidth();
@@ -61,10 +62,10 @@ float RTGUIText::getWidth()
 
 float RTGUIText::getHeight()
 {
-	if (textures[0] == nullptr)
+	if (textures[0] == nullptr) // if the first element is nullptr, return -1
 		return -1.f;
 
-	return textures[0]->getHeight();
+	return textures[0]->getHeight(); // only need the height of the first element
 }
 
 void RTGUIText::draw(RTVec2<float> pos)
@@ -74,7 +75,7 @@ void RTGUIText::draw(RTVec2<float> pos)
 	for (i = 0; i < textures.size(); i++)
 	{
 		if (i > 0)
-			x += textures[i - 1]->getWidth();
+			x += textures[i - 1]->getWidth(); // x offsets by the previous texture's width after 0th index
 
 		SDL_FRect rect = {};
 		rect.x = x;
@@ -84,6 +85,7 @@ void RTGUIText::draw(RTVec2<float> pos)
 
 		SDL_RenderTexture(RTRENDERER->getHandle(), textures[i]->getRaw(), nullptr, &rect);
 
+		// TODO: remove the debug dots
 		SDL_SetRenderDrawColor(RTRENDERER->getHandle(), 0xff, 0x00, 0x00, 0xff);
 		SDL_RenderPoint(RTRENDERER->getHandle(), x, pos.y);
 		SDL_SetRenderDrawColor(RTRENDERER->getHandle(), 0x00, 0x00, 0x00, 0xff);

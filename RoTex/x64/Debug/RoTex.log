@@ -566,6 +566,11 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
         Found __imp_malloc
           Referenced in rotex.obj
           Loaded ucrtd.lib(ucrtbased.dll)
+        Found __imp_exit
+          Referenced in rotex.obj
+          Referenced in rotex_entity.obj
+          Referenced in rotex_gui_text.obj
+          Loaded ucrtd.lib(ucrtbased.dll)
         Found __imp__CrtDbgReport
           Referenced in rotex_loader.obj
           Referenced in rotex_texture.obj
@@ -586,10 +591,6 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
         Found __imp_sqrtf
           Referenced in rotex_entity.obj
           Referenced in rotex_grid_map.obj
-          Loaded ucrtd.lib(ucrtbased.dll)
-        Found __imp_exit
-          Referenced in rotex_entity.obj
-          Referenced in rotex_gui_text.obj
           Loaded ucrtd.lib(ucrtbased.dll)
         Found sqrt
           Referenced in rotex_grid_map.obj
@@ -964,25 +965,25 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
    /v
    /x
    /fo
-   "C:\Users\pengu\AppData\Local\Temp\lnk{5B9FC456-D2E5-4F96-9C97-E3F62FCBFDF1}.tmp"
-   "C:\Users\pengu\AppData\Local\Temp\lnk{3DB132B2-1B82-420C-8E49-D58A2CD2217B}.tmp"
+   "C:\Users\pengu\AppData\Local\Temp\lnk{A2147BF1-4631-4833-8187-7C95805D0AD6}.tmp"
+   "C:\Users\pengu\AppData\Local\Temp\lnk{36E0D883-57BA-4B9E-9F56-1EA7EFE7AD2C}.tmp"
   Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
   
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
   
   Using codepage 1252 as default
-  Creating C:\Users\pengu\AppData\Local\Temp\lnk{5B9FC456-D2E5-4F96-9C97-E3F62FCBFDF1}.tmp
+  Creating C:\Users\pengu\AppData\Local\Temp\lnk{A2147BF1-4631-4833-8187-7C95805D0AD6}.tmp
   
   
-  C:\Users\pengu\AppData\Local\Temp\lnk{3DB132B2-1B82-420C-8E49-D58A2CD2217B}.tmp.
+  C:\Users\pengu\AppData\Local\Temp\lnk{36E0D883-57BA-4B9E-9F56-1EA7EFE7AD2C}.tmp.
   Writing 24:2,	lang:0x409,	size 145
   Invoking cvtres.exe:
    /machine:amd64
    /verbose
-   /out:"C:\Users\pengu\AppData\Local\Temp\lnk{AE132EA7-C6D6-4A18-8611-26A0E19DB8B1}.tmp"
+   /out:"C:\Users\pengu\AppData\Local\Temp\lnk{A0EBB1FB-E3C9-4880-8C91-9909D287BA04}.tmp"
    /readonly
-   "C:\Users\pengu\AppData\Local\Temp\lnk{5B9FC456-D2E5-4F96-9C97-E3F62FCBFDF1}.tmp"
+   "C:\Users\pengu\AppData\Local\Temp\lnk{A2147BF1-4631-4833-8187-7C95805D0AD6}.tmp"
   Microsoft (R) Windows Resource To Object Converter Version 14.44.35209.0
   Copyright (C) Microsoft Corporation.  All rights reserved.
   

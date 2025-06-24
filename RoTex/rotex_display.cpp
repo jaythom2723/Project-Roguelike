@@ -11,14 +11,14 @@ RTDisplay::RTDisplay(const std::string title, const int width, const int height)
 	this->width = width;
 	this->height = height;
 
-	hdl = SDL_CreateWindow(title.c_str(), width, height, 0);
-	if (hdl == nullptr)
+	hdl = SDL_CreateWindow(title.c_str(), width, height, 0); // create the SDL_Window
+	if (hdl == nullptr) // if nullptr, push DISPLAY_CREATE_ERR to the error stack, return
 	{
 		rotex::pushError(rotex::RTErr::DISPLAY_CREATE_ERR);
 		return;
 	}
 
-	format = SDL_GetWindowPixelFormat(hdl);
+	format = SDL_GetWindowPixelFormat(hdl); // get the pixel format of the window and store it for future use
 }
 
 RTDisplay::~RTDisplay()

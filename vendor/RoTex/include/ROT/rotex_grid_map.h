@@ -37,6 +37,7 @@ public:
 	ROTEXAPI void resetGridMap();
 	ROTEXAPI void setGridCell(const RTVec2<int> coord, std::shared_ptr<RTEntity> entity);
 	ROTEXAPI void clearGridCell(const RTVec2<int> coord);
+	ROTEXAPI void clearGridCell(RTGridCell* cell);
 	ROTEXAPI void moveGridCell(const RTVec2<int> c1, const RTVec2<int> c2);
 
 	ROTEXAPI bool isGridCellPassThrough(const RTVec2<int> coord);
