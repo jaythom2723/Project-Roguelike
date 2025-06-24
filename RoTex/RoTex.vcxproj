@@ -159,6 +159,8 @@ copy "$(SolutionDir)$(IntDir)RoTex.lib" "$(SolutionDir)vendor\RoTex"</Command>
     <ClInclude Include="rotex_err.h" />
     <ClInclude Include="rotex_event_handler.h" />
     <ClInclude Include="rotex_grid_map.h" />
+    <ClInclude Include="rotex_gui_header.h" />
+    <ClInclude Include="rotex_gui_text.h" />
     <ClInclude Include="rotex_loader.h" />
     <ClInclude Include="rotex_render.h" />
     <ClInclude Include="rotex_texture.h" />
@@ -173,6 +175,8 @@ copy "$(SolutionDir)$(IntDir)RoTex.lib" "$(SolutionDir)vendor\RoTex"</Command>
     <ClCompile Include="rotex_err.cpp" />
     <ClCompile Include="rotex_event_handler.cpp" />
     <ClCompile Include="rotex_grid_map.cpp" />
+    <ClCompile Include="rotex_gui_header.cpp" />
+    <ClCompile Include="rotex_gui_text.cpp" />
     <ClCompile Include="rotex_loader.cpp" />
     <ClCompile Include="rotex_render.cpp" />
     <ClCompile Include="rotex_texture.cpp" />

@@ -6,4 +6,5 @@
   main.cpp
   player.cpp
   Generating Code...
+E:\Programming\RLProj\vendor\RoTex\include\ROT\rotex_color.h(39,1): warning C4715: 'RTColor::operator=': not all control paths return a value
   Roguelike.vcxproj -> E:\Programming\RLProj\x64\Debug\Roguelike.exe

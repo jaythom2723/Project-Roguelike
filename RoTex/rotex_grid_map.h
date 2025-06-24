@@ -7,8 +7,12 @@
 #include "rotex_defs.h"
 #include "rotex_vec.h"
 
-#define RTGRIDMAP_ROWS 30
+#define RTGRIDCELL_SIZE_PX 16
+
+#define RTGRIDMAP_ROWS 35
 #define RTGRIDMAP_COLS 40
+#define RTGRIDMAP_WIDTH_PX RTGRIDMAP_COLS * RTGRIDCELL_SIZE_PX
+#define RTGRIDMAP_HEIGHT_PX RTGRIDMAP_ROWS * RTGRIDCELL_SIZE_PX
 
 class RTEntity;
 
@@ -39,6 +43,7 @@ public:
 	ROTEXAPI bool isGridCellEmpty(const RTVec2<int> coord);
 
 	ROTEXAPI const RTVec2<float> gridCellToWorldPosition(const RTVec2<int> coords);
+	ROTEXAPI const RTGridCell* getGridCell(int row, int col);
 
 	ROTEXAPI void draw();
 };

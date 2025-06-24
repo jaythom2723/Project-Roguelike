@@ -24,6 +24,8 @@
 #include "rotex_grid_map.h"
 #include "rotex_entity.h"
 #include "rotex_entity_ev.h"
+#include "rotex_gui_text.h"
+#include "rotex_gui_header.h"
 
 #define RTDISPLAY rotex::getContext()->display
 #define RTRENDERER rotex::getContext()->renderer
@@ -31,6 +33,8 @@
 #define RTENTITIES rotex::getContext()->entityRegistry
 #define RTGRIDMAP rotex::getContext()->gridMap
 #define RTCURSORMAP rotex::getContext()->cursorMap
+#define RTGUIHEADERFONT rotex::getContext()->headerFont
+#define RTGUIFONT rotex::getContext()->guiFont
 
 struct RTContext
 {
@@ -41,6 +45,8 @@ public:
 	std::unique_ptr<RTGridMap> cursorMap;
 	std::vector<std::shared_ptr<RTEntity>> entityRegistry;
 	TTF_Font* font;
+	TTF_Font* headerFont;
+	TTF_Font* guiFont;
 };
 
 namespace rotex

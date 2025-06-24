@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 
-#undef RT_CTX_ONLY
 #include <ROT/rotex.h>
+#include <ROT/rotex_gui_header.h>
 
 #include <SDL3/SDL.h>
 #include <SDL3_ttf/SDL_ttf.h>
@@ -11,6 +11,8 @@
 #include "cursor.h"
 
 GameState gstate = { 0 };
+RTGUIHeader* header = nullptr;
+RTGUIText* text = nullptr;
 
 void event_loop(SDL_Event& e);
 void update(double deltaTime);
@@ -18,7 +20,7 @@ void draw();
 
 int main()
 {
-	if (!rotex::init("test", 640, 480))
+	if (!rotex::init("Project: Roguelike", 960, 560))
 	{
 		std::printf("%s - %s\n", rotex::getError().c_str(), SDL_GetError());
 		return -1;
@@ -37,6 +39,14 @@ int main()
 	RTCURSORMAP->setGridCell(RTVec2<int>(RTGRIDMAP_COLS-1, RTGRIDMAP_ROWS-1), gstate.cursor);
 	gstate.cursor->setPos(RTCURSORMAP->gridCellToWorldPosition(RTVec2<int>(RTGRIDMAP_COLS - 1, RTGRIDMAP_ROWS - 1)));
 
+	std::vector<std::string> texts = { "--[", "RTGUIHeader", "]--" };
+	std::vector<RTColor> colors = { RTCOL_WHITE, RTCOL_GREEN, RTCOL_WHITE };
+	header = new RTGUIHeader(texts, colors);
+
+	texts = { "RTGUIText" };
+	colors = { RTCOL_RED };
+	text = new RTGUIText(RTGUIFONT, texts, colors);
+
 	std::uint64_t last, now;
 	double deltaTime;
 
@@ -54,8 +64,11 @@ int main()
 		event_loop(e);
 		update(deltaTime);
 		draw();
+
+		SDL_RenderPresent(RTRENDERER->getHandle());
 	}
 
+	delete header;
 	rotex::close();
 
 	return 0;
@@ -71,6 +84,16 @@ void event_loop(SDL_Event& e)
 		{
 			RTDISPLAY->setClose(true);
 			return;
+		}
+
+		if (e.type == SDL_EVENT_KEY_DOWN)
+		{
+			switch (e.key.scancode)
+			{
+			case SDL_SCANCODE_SPACE:
+				header->setNewTextAt(RTGUIHEADERFONT, "RTGUIHeader2", RTCOL_BLUE, 1);
+				break;
+			}
 		}
 
 		for (i = 0; i < RTENTITIES.size(); i++)
@@ -94,7 +117,7 @@ void event_loop(SDL_Event& e)
 	}
 }
 
-void update(double deltaTime)
+void update(double deltaTime) 
 {
 	for (auto ent : RTENTITIES)
 		ent->update(deltaTime);
@@ -106,6 +129,14 @@ void draw()
 
 	RTGRIDMAP->draw();
 	RTCURSORMAP->draw();
+	
+	// draw the border of the grid-map
+	SDL_SetRenderDrawColor(RTRENDERER->getHandle(), 0xff, 0xff, 0xff, 0xff);
+	SDL_RenderLine(RTRENDERER->getHandle(), RTGRIDMAP_WIDTH_PX, 0, RTGRIDMAP_WIDTH_PX, RTGRIDMAP_HEIGHT_PX);
+	SDL_SetRenderDrawColor(RTRENDERER->getHandle(), 0x00, 0x00, 0x00, 0xff);
 
-	SDL_RenderPresent(RTRENDERER->getHandle());
+	float x = RTGRIDMAP_WIDTH_PX + (((RTDISPLAY->getWidth() - RTGRIDMAP_WIDTH_PX) / 2) - (header->getWidth() / 2));
+	header->draw(RTVec2<float>(x, 16));
+	x = RTGRIDMAP_WIDTH_PX + (((RTDISPLAY->getWidth() - RTGRIDMAP_WIDTH_PX) / 2) - (text->getWidth() / 2));
+	text->draw(RTVec2<float>(x, 16+header->getHeight()));
 }

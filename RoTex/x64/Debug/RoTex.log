@@ -6,6 +6,8 @@
   rotex_err.cpp
   rotex_event_handler.cpp
   rotex_grid_map.cpp
+  rotex_gui_header.cpp
+  rotex_gui_text.cpp
   rotex_loader.cpp
   rotex_render.cpp
   rotex_texture.cpp
@@ -43,6 +45,15 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Loaded SDL3.lib(SDL3.dll)
         Found SDL_RenderTexture
           Referenced in rotex_entity.obj
+          Referenced in rotex_gui_text.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_SetRenderDrawColor
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_gui_text.obj
+          Loaded SDL3.lib(SDL3.dll)
+        Found SDL_RenderPoint
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_gui_text.obj
           Loaded SDL3.lib(SDL3.dll)
         Found SDL_CreateRenderer
           Referenced in rotex_render.obj
@@ -66,6 +77,8 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Referenced in rotex_texture.obj
           Loaded SDL3.lib(SDL3.dll)
         Found __IMPORT_DESCRIPTOR_SDL3
+          Referenced in SDL3.lib(SDL3.dll)
+          Referenced in SDL3.lib(SDL3.dll)
           Referenced in SDL3.lib(SDL3.dll)
           Referenced in SDL3.lib(SDL3.dll)
           Referenced in SDL3.lib(SDL3.dll)
@@ -139,24 +152,30 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
       Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\um\x64\odbccp32.lib:
       Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\msvcprtd.lib:
         Found "__declspec(dllimport) public: __cdecl std::_Lockit::_Lockit(int)" (__imp_??0_Lockit@std@@QEAA@H@Z)
-          Referenced in rotex_event_handler.obj
-          Referenced in rotex_loader.obj
           Referenced in rotex_texture.obj
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
+          Referenced in rotex_loader.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_entity.obj
           Referenced in rotex_err.obj
           Loaded msvcprtd.lib(MSVCP140D.dll)
         Found "__declspec(dllimport) public: __cdecl std::_Lockit::~_Lockit(void)" (__imp_??1_Lockit@std@@QEAA@XZ)
-          Referenced in rotex_event_handler.obj
-          Referenced in rotex_loader.obj
           Referenced in rotex_texture.obj
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
+          Referenced in rotex_loader.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_entity.obj
           Referenced in rotex_err.obj
           Loaded msvcprtd.lib(MSVCP140D.dll)
         Found "void __cdecl std::_Xlength_error(char const *)" (?_Xlength_error@std@@YAXPEBD@Z)
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_err.obj
@@ -174,35 +193,43 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
         Found "void * __cdecl operator new(unsigned __int64)" (??2@YAPEAX_K@Z)
           Referenced in rotex_err.obj
           Referenced in rotex_event_handler.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_entity.obj
           Referenced in rotex_entity_ev.obj
           Loaded MSVCRTD.lib(new_scalar.obj)
         Found "void __cdecl operator delete(void *,unsigned __int64)" (??3@YAXPEAX_K@Z)
-          Referenced in rotex_err.obj
-          Referenced in rotex_event_handler.obj
           Referenced in rotex_loader.obj
           Referenced in rotex_texture.obj
+          Referenced in rotex_err.obj
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_entity.obj
           Referenced in rotex_entity_ev.obj
           Loaded MSVCRTD.lib(delete_scalar_size.obj)
         Found _RTC_CheckStackVars
-          Referenced in rotex_event_handler.obj
-          Referenced in rotex_grid_map.obj
           Referenced in rotex_loader.obj
           Referenced in rotex_texture.obj
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_entity.obj
           Referenced in rotex_err.obj
           Loaded MSVCRTD.lib(stack.obj)
         Found _RTC_InitBase
+          Referenced in rotex_texture.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex_loader.obj
           Referenced in rotex_render.obj
-          Referenced in rotex_texture.obj
           Referenced in rotex_entity_ev.obj
           Referenced in rotex_err.obj
           Referenced in rotex_event_handler.obj
@@ -213,9 +240,11 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Referenced in rotex_entity.obj
           Loaded MSVCRTD.lib(init.obj)
         Found __CheckForDebuggerJustMyCode
+          Referenced in rotex_texture.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex_loader.obj
           Referenced in rotex_render.obj
-          Referenced in rotex_texture.obj
           Referenced in rotex_entity_ev.obj
           Referenced in rotex_err.obj
           Referenced in rotex_event_handler.obj
@@ -226,27 +255,33 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Referenced in rotex_entity.obj
           Loaded MSVCRTD.lib(debugger_jmc.obj)
         Found __GSHandlerCheck
-          Referenced in rotex_event_handler.obj
-          Referenced in rotex_grid_map.obj
           Referenced in rotex_loader.obj
           Referenced in rotex_texture.obj
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_entity.obj
           Referenced in rotex_err.obj
           Loaded MSVCRTD.lib(gshandler.obj)
         Found __GSHandlerCheck_EH4
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_err.obj
           Referenced in rotex_event_handler.obj
           Loaded MSVCRTD.lib(gshandlereh4.obj)
         Found __security_check_cookie
+          Referenced in rotex_loader.obj
+          Referenced in rotex_texture.obj
           Referenced in MSVCRTD.lib(gshandler.obj)
           Referenced in rotex_event_handler.obj
           Referenced in rotex_grid_map.obj
-          Referenced in rotex_loader.obj
-          Referenced in rotex_texture.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_entity.obj
@@ -255,30 +290,37 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
         Found "const type_info::`vftable'" (??_7type_info@@6B@)
           Referenced in rotex_err.obj
           Referenced in rotex_event_handler.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_entity.obj
           Referenced in rotex_entity_ev.obj
           Loaded MSVCRTD.lib(std_type_info_static.obj)
         Found __security_cookie
+          Referenced in rotex_loader.obj
+          Referenced in rotex_texture.obj
           Referenced in MSVCRTD.lib(amdsecgs.obj)
           Referenced in rotex_event_handler.obj
           Referenced in rotex_grid_map.obj
-          Referenced in rotex_loader.obj
-          Referenced in rotex_texture.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_entity.obj
           Referenced in rotex_err.obj
           Loaded MSVCRTD.lib(gs_cookie.obj)
         Found _fltused
+          Referenced in rotex_loader.obj
           Referenced in rotex_texture.obj
           Referenced in rotex.obj
           Referenced in rotex_entity.obj
           Referenced in rotex_grid_map.obj
-          Referenced in rotex_loader.obj
+          Referenced in rotex_gui_text.obj
           Loaded MSVCRTD.lib(fltused.obj)
         Found "void __cdecl `eh vector destructor iterator'(void *,unsigned __int64,unsigned __int64,void (__cdecl*)(void *))" (??_M@YAXPEAX_K1P6AX0@Z@Z)
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex_entity.obj
           Referenced in rotex_entity_ev.obj
           Referenced in rotex_err.obj
@@ -287,6 +329,8 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
         Found "void __cdecl operator delete[](void *,unsigned __int64)" (??_V@YAXPEAX_K@Z)
           Referenced in rotex_entity.obj
           Referenced in rotex_entity_ev.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Loaded MSVCRTD.lib(delete_array_size.obj)
         Found atexit
           Referenced in rotex_err.obj
@@ -379,11 +423,15 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
       Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\OLDNAMES.lib:
       Searching C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\lib\x64\vcruntimed.lib:
         Found memcpy
+          Referenced in rotex_gui_text.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_err.obj
+          Referenced in rotex_gui_header.obj
           Loaded vcruntimed.lib(VCRUNTIME140D.dll)
         Found __std_exception_copy
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in MSVCRTD.lib(throw_bad_alloc.obj)
           Referenced in rotex.obj
           Referenced in rotex_display.obj
@@ -391,6 +439,8 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Referenced in rotex_event_handler.obj
           Loaded vcruntimed.lib(VCRUNTIME140D.dll)
         Found __std_exception_destroy
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in MSVCRTD.lib(throw_bad_alloc.obj)
           Referenced in rotex.obj
           Referenced in rotex_display.obj
@@ -398,6 +448,8 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Referenced in rotex_event_handler.obj
           Loaded vcruntimed.lib(VCRUNTIME140D.dll)
         Found _CxxThrowException
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in MSVCRTD.lib(throw_bad_alloc.obj)
           Referenced in rotex.obj
           Referenced in rotex_display.obj
@@ -405,12 +457,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Referenced in rotex_event_handler.obj
           Loaded vcruntimed.lib(VCRUNTIME140D.dll)
         Found __CxxFrameHandler4
+          Referenced in rotex_gui_text.obj
+          Referenced in rotex_loader.obj
           Referenced in rotex_texture.obj
           Referenced in MSVCRTD.lib(gshandlereh4.obj)
           Referenced in rotex_err.obj
           Referenced in rotex_event_handler.obj
           Referenced in rotex_grid_map.obj
-          Referenced in rotex_loader.obj
+          Referenced in rotex_gui_header.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_entity.obj
@@ -420,6 +474,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Referenced in rotex_display.obj
           Referenced in rotex_err.obj
           Referenced in rotex_event_handler.obj
+          Referenced in rotex_gui_text.obj
           Loaded vcruntimed.lib(VCRUNTIME140D.dll)
         Found memset
           Referenced in rotex_err.obj
@@ -482,10 +537,12 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Loaded vcruntimed.lib(VCRUNTIME140_1D.dll)
       Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64\ucrtd.lib:
         Found __imp__invoke_watson
-          Referenced in rotex_event_handler.obj
-          Referenced in rotex_grid_map.obj
           Referenced in rotex_loader.obj
           Referenced in rotex_texture.obj
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_entity.obj
@@ -498,6 +555,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
         Found __imp___acrt_iob_func
           Referenced in rotex.obj
           Referenced in rotex_entity.obj
+          Referenced in rotex_gui_text.obj
           Loaded ucrtd.lib(ucrtbased.dll)
         Found __imp_calloc
           Referenced in rotex.obj
@@ -509,10 +567,12 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Referenced in rotex.obj
           Loaded ucrtd.lib(ucrtbased.dll)
         Found __imp__CrtDbgReport
-          Referenced in rotex_event_handler.obj
-          Referenced in rotex_grid_map.obj
           Referenced in rotex_loader.obj
           Referenced in rotex_texture.obj
+          Referenced in rotex_event_handler.obj
+          Referenced in rotex_grid_map.obj
+          Referenced in rotex_gui_header.obj
+          Referenced in rotex_gui_text.obj
           Referenced in rotex.obj
           Referenced in rotex_display.obj
           Referenced in rotex_entity.obj
@@ -521,6 +581,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
         Found __imp___stdio_common_vfprintf
           Referenced in rotex.obj
           Referenced in rotex_entity.obj
+          Referenced in rotex_gui_text.obj
           Loaded ucrtd.lib(ucrtbased.dll)
         Found __imp_sqrtf
           Referenced in rotex_entity.obj
@@ -528,6 +589,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Loaded ucrtd.lib(ucrtbased.dll)
         Found __imp_exit
           Referenced in rotex_entity.obj
+          Referenced in rotex_gui_text.obj
           Loaded ucrtd.lib(ucrtbased.dll)
         Found sqrt
           Referenced in rotex_grid_map.obj
@@ -902,25 +964,25 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
    /v
    /x
    /fo
-   "C:\Users\pengu\AppData\Local\Temp\lnk{6598C26F-3880-45A7-8FA5-E77AC445BAAD}.tmp"
-   "C:\Users\pengu\AppData\Local\Temp\lnk{A7777136-7A70-481B-A240-7719AC1E8052}.tmp"
+   "C:\Users\pengu\AppData\Local\Temp\lnk{5B9FC456-D2E5-4F96-9C97-E3F62FCBFDF1}.tmp"
+   "C:\Users\pengu\AppData\Local\Temp\lnk{3DB132B2-1B82-420C-8E49-D58A2CD2217B}.tmp"
   Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
   
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
   
   Using codepage 1252 as default
-  Creating C:\Users\pengu\AppData\Local\Temp\lnk{6598C26F-3880-45A7-8FA5-E77AC445BAAD}.tmp
+  Creating C:\Users\pengu\AppData\Local\Temp\lnk{5B9FC456-D2E5-4F96-9C97-E3F62FCBFDF1}.tmp
   
   
-  C:\Users\pengu\AppData\Local\Temp\lnk{A7777136-7A70-481B-A240-7719AC1E8052}.tmp.
+  C:\Users\pengu\AppData\Local\Temp\lnk{3DB132B2-1B82-420C-8E49-D58A2CD2217B}.tmp.
   Writing 24:2,	lang:0x409,	size 145
   Invoking cvtres.exe:
    /machine:amd64
    /verbose
-   /out:"C:\Users\pengu\AppData\Local\Temp\lnk{5DBD5722-F472-4669-837C-CB8CFD9BE5E1}.tmp"
+   /out:"C:\Users\pengu\AppData\Local\Temp\lnk{AE132EA7-C6D6-4A18-8611-26A0E19DB8B1}.tmp"
    /readonly
-   "C:\Users\pengu\AppData\Local\Temp\lnk{6598C26F-3880-45A7-8FA5-E77AC445BAAD}.tmp"
+   "C:\Users\pengu\AppData\Local\Temp\lnk{5B9FC456-D2E5-4F96-9C97-E3F62FCBFDF1}.tmp"
   Microsoft (R) Windows Resource To Object Converter Version 14.44.35209.0
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
@@ -944,6 +1006,8 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
        rotex_texture.obj
        rotex_render.obj
        rotex_loader.obj
+       rotex_gui_text.obj
+       rotex_gui_header.obj
        rotex_grid_map.obj
        rotex_event_handler.obj
        rotex_err.obj
@@ -952,6 +1016,8 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
        rotex_display.obj
        rotex_color.obj
        rotex.obj
+       SDL3.lib(SDL3.dll)
+       SDL3.lib(SDL3.dll)
        SDL3.lib(SDL3.dll)
        SDL3.lib(SDL3.dll)
        SDL3.lib(SDL3.dll)
@@ -1119,9 +1185,11 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
   E:\Programming\RLProj\RoTex\rotex_err.h
   E:\Programming\RLProj\RoTex\rotex_event_handler.h
   E:\Programming\RLProj\RoTex\rotex_grid_map.h
+  E:\Programming\RLProj\RoTex\rotex_gui_header.h
+  E:\Programming\RLProj\RoTex\rotex_gui_text.h
   E:\Programming\RLProj\RoTex\rotex_loader.h
   E:\Programming\RLProj\RoTex\rotex_render.h
   E:\Programming\RLProj\RoTex\rotex_texture.h
   E:\Programming\RLProj\RoTex\rotex_vec.h
-         13 file(s) copied.
+         15 file(s) copied.
           1 file(s) copied.

@@ -94,6 +94,7 @@ bool rotex::init(const std::string title, const int w, const int h)
 		return rotex::pushErrRet(rotex::RTErr::SDL_INIT_ERR);
 	
 	// initialize the whole context
+	// TODO: refactor for "new"
 	ctx = (RTContext*) std::calloc(1, sizeof(RTContext));
 	if (ctx == nullptr)
 		return rotex::pushErrRet(rotex::RTErr::MEM_ALLOC_ERR);
@@ -131,13 +132,38 @@ bool rotex::init(const std::string title, const int w, const int h)
 		return rotex::pushErrRet(rotex::RTErr::ASSET_LOAD_FAILURE_ERR);
 	}
 
+	// initialize the header font
+	ctx->headerFont = rotex::loadFont("gfx/fonts/Mx437_Robotron_A7100.ttf", 20.5f);
+	if (ctx->headerFont == nullptr)
+	{
+		std::printf("headerFont is NULL\n");
+		return rotex::pushErrRet(rotex::RTErr::ASSET_LOAD_FAILURE_ERR);
+	}
+
+	// initialize the GUI font
+	ctx->guiFont = rotex::loadFont("gfx/fonts/Mx437_Robotron_A7100.ttf", 16.f);
+	if (ctx->guiFont == nullptr)
+	{
+		std::printf("guiFont is NULL\n");
+		return rotex::pushErrRet(rotex::RTErr::ASSET_LOAD_FAILURE_ERR);
+	}
+
 	return true;
 }
 
 void rotex::close()
 {
-	TTF_CloseFont(ctx->font);
+	// if the context is already destroyed or uninitialized, do nothing
+	if (ctx == nullptr)
+		return;
 
+	// destroy all of the loaded fonts
+	TTF_CloseFont(ctx->font);
+	TTF_CloseFont(ctx->headerFont);
+	TTF_CloseFont(ctx->guiFont);
+
+	// free the context
+	// TODO: refactor for delete
 	std::free(reinterpret_cast<void*>(ctx));
 	ctx = nullptr;
 

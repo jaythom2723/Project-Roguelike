@@ -40,6 +40,12 @@
     <Filter Include="Source Files\entities">
       <UniqueIdentifier>{1054404e-556e-4d93-abdd-d9359538a00b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui">
+      <UniqueIdentifier>{8d9fac19-132c-4a7c-8bd4-e6cf7b4ac020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui">
+      <UniqueIdentifier>{b4b1a252-167a-4be0-a249-62e6e4760fd8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="rotex.h">
@@ -81,6 +87,12 @@
     <ClInclude Include="rotex_grid_map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rotex_gui_header.h">
+      <Filter>Header Files\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="rotex_gui_text.h">
+      <Filter>Header Files\gui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="rotex.cpp">
@@ -115,6 +127,12 @@
     </ClCompile>
     <ClCompile Include="rotex_event_handler.cpp">
       <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="rotex_gui_header.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="rotex_gui_text.cpp">
+      <Filter>Source Files\gui</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

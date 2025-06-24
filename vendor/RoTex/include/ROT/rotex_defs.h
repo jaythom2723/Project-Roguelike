@@ -9,6 +9,8 @@
 
 #include <SDL3/SDL.h>
 
+#define RTGUI_MAX_COLORS 8
+
 namespace rotex
 {
 	typedef enum {

@@ -59,7 +59,7 @@ void RTGridMap::clearGridCell(const RTVec2<int> coord)
 // moving from a TO b
 void RTGridMap::moveGridCell(const RTVec2<int> a, const RTVec2<int> b)
 {
-	if (b.x < 0 || b.x > RTGRIDMAP_COLS || b.y < 0 || b.y > RTGRIDMAP_ROWS)
+	if (b.x < 0 || b.x > (RTGRIDMAP_COLS-1) || b.y < 0 || b.y > (RTGRIDMAP_ROWS-1))
 		return;
 	
 	RTGridCell* cell1, * cell2;
@@ -104,6 +104,14 @@ const RTVec2<float> RTGridMap::gridCellToWorldPosition(const RTVec2<int> coord)
 	return map[coord.y][coord.x].worldPos;
 }
 
+const RTGridCell* RTGridMap::getGridCell(int row, int col)
+{
+	if (row > RTGRIDMAP_ROWS - 1 || col > RTGRIDMAP_COLS - 1)
+		return NULL;
+
+	return &(map[row][col]);
+}
+
 void RTGridMap::draw()
 {
 	int row, col;
@@ -119,11 +127,11 @@ void RTGridMap::draw()
 			if (cell->entity != nullptr && cell->entity->isVisible())
 				cell->entity->draw();
 
-			/*
+			
 			SDL_SetRenderDrawColor(RTRENDERER->getHandle(), 0xff, 0xff, 0xff, 0xff);
 			SDL_RenderPoint(RTRENDERER->getHandle(), cell->worldPos.x, cell->worldPos.y);
 			SDL_SetRenderDrawColor(RTRENDERER->getHandle(), 0x00, 0x00, 0x00, 0xff);
-			*/
+			
 		}
 	}
 }

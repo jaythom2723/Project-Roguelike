@@ -26,6 +26,17 @@ public:
 	ROTEXAPI ~RTColor();
 
 	ROTEXAPI SDL_Color getRaw();
+
+	RTColor& operator=(const RTColor& other)
+	{
+		if (this == &other)
+			return *this;
+
+		color.r = other.color.r;
+		color.g = other.color.g;
+		color.b = other.color.b;
+		color.a = other.color.a;
+	}
 };
 
 #endif // ROTEX_COLOR_H
