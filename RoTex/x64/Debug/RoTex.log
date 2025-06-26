@@ -19,6 +19,9 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
   Processed /DEFAULTLIB:OLDNAMES
   Searching libraries
       Searching E:\Programming\RLProj\vendor\SDL3\SDL3.lib:
+        Found SDL_PollEvent
+          Referenced in rotex.obj
+          Loaded SDL3.lib(SDL3.dll)
         Found SDL_Init
           Referenced in rotex.obj
           Loaded SDL3.lib(SDL3.dll)
@@ -77,6 +80,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Referenced in rotex_texture.obj
           Loaded SDL3.lib(SDL3.dll)
         Found __IMPORT_DESCRIPTOR_SDL3
+          Referenced in SDL3.lib(SDL3.dll)
           Referenced in SDL3.lib(SDL3.dll)
           Referenced in SDL3.lib(SDL3.dll)
           Referenced in SDL3.lib(SDL3.dll)
@@ -470,6 +474,9 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Referenced in rotex_entity.obj
           Referenced in rotex_entity_ev.obj
           Loaded vcruntimed.lib(VCRUNTIME140_1D.dll)
+        Found __RTDynamicCast
+          Referenced in rotex.obj
+          Loaded vcruntimed.lib(VCRUNTIME140D.dll)
         Found memmove
           Referenced in rotex_display.obj
           Referenced in rotex_err.obj
@@ -511,6 +518,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
           Referenced in MSVCRTD.lib(pdblkup.obj)
           Loaded vcruntimed.lib(VCRUNTIME140D.dll)
         Found __IMPORT_DESCRIPTOR_VCRUNTIME140D
+          Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
           Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
           Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
           Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
@@ -965,25 +973,25 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
    /v
    /x
    /fo
-   "C:\Users\pengu\AppData\Local\Temp\lnk{A2147BF1-4631-4833-8187-7C95805D0AD6}.tmp"
-   "C:\Users\pengu\AppData\Local\Temp\lnk{36E0D883-57BA-4B9E-9F56-1EA7EFE7AD2C}.tmp"
+   "C:\Users\pengu\AppData\Local\Temp\lnk{2FB6589F-292A-44FC-A71B-72F1A87222D3}.tmp"
+   "C:\Users\pengu\AppData\Local\Temp\lnk{9C653AA9-CA69-4AD0-8740-4B3950CEE83F}.tmp"
   Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
   
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
   
   Using codepage 1252 as default
-  Creating C:\Users\pengu\AppData\Local\Temp\lnk{A2147BF1-4631-4833-8187-7C95805D0AD6}.tmp
+  Creating C:\Users\pengu\AppData\Local\Temp\lnk{2FB6589F-292A-44FC-A71B-72F1A87222D3}.tmp
   
   
-  C:\Users\pengu\AppData\Local\Temp\lnk{36E0D883-57BA-4B9E-9F56-1EA7EFE7AD2C}.tmp.
+  C:\Users\pengu\AppData\Local\Temp\lnk{9C653AA9-CA69-4AD0-8740-4B3950CEE83F}.tmp.
   Writing 24:2,	lang:0x409,	size 145
   Invoking cvtres.exe:
    /machine:amd64
    /verbose
-   /out:"C:\Users\pengu\AppData\Local\Temp\lnk{A0EBB1FB-E3C9-4880-8C91-9909D287BA04}.tmp"
+   /out:"C:\Users\pengu\AppData\Local\Temp\lnk{919EF60B-D300-4E67-AA66-48D0DBB643B4}.tmp"
    /readonly
-   "C:\Users\pengu\AppData\Local\Temp\lnk{A2147BF1-4631-4833-8187-7C95805D0AD6}.tmp"
+   "C:\Users\pengu\AppData\Local\Temp\lnk{2FB6589F-292A-44FC-A71B-72F1A87222D3}.tmp"
   Microsoft (R) Windows Resource To Object Converter Version 14.44.35209.0
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
@@ -1017,6 +1025,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
        rotex_display.obj
        rotex_color.obj
        rotex.obj
+       SDL3.lib(SDL3.dll)
        SDL3.lib(SDL3.dll)
        SDL3.lib(SDL3.dll)
        SDL3.lib(SDL3.dll)
@@ -1124,6 +1133,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
        vcruntimed.lib(VCRUNTIME140_1D.dll)
        vcruntimed.lib(VCRUNTIME140_1D.dll)
        vcruntimed.lib(VCRUNTIME140_1D.dll)
+       vcruntimed.lib(VCRUNTIME140D.dll)
        vcruntimed.lib(VCRUNTIME140D.dll)
        vcruntimed.lib(VCRUNTIME140D.dll)
        vcruntimed.lib(VCRUNTIME140D.dll)

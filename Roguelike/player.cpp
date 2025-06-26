@@ -18,6 +18,17 @@ Player::~Player()
 
 }
 
+void Player::setHitpoints(std::pair<int,int> value)
+{
+	hp = value.first;
+	max_hp = value.second;
+}
+
+std::pair<int, int> Player::getHitpoints()
+{
+	return std::make_pair(hp, max_hp);
+}
+
 void Player::update(double deltaTime)
 {
 	if (gstate.cursorMode)

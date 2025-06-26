@@ -103,8 +103,10 @@ void RTGridMap::moveGridCell(const RTVec2<int> a, const RTVec2<int> b)
 	cell2->passThrough = cell2->entity ? !cell2->entity->isSolid() : true;	// set pass through based on the entity's solid value
 	cell2->entity->setPos(cell2->worldPos);									// set the entity's new world position to cell2's world pos
 	cell2->entity->setCell(cell2);											// set the entity's own cell reference to cell2
-	
-	clearGridCell(cell1); // clear cell1
+
+	// reset cell1
+	cell1->entity = nullptr;
+	cell1->passThrough = true;
 }
 
 bool RTGridMap::isGridCellPassThrough(const RTVec2<int> coord)
@@ -152,7 +154,6 @@ void RTGridMap::draw()
 			SDL_SetRenderDrawColor(RTRENDERER->getHandle(), 0xff, 0xff, 0xff, 0xff);
 			SDL_RenderPoint(RTRENDERER->getHandle(), cell->worldPos.x, cell->worldPos.y);
 			SDL_SetRenderDrawColor(RTRENDERER->getHandle(), 0x00, 0x00, 0x00, 0xff);
-			
 		}
 	}
 }

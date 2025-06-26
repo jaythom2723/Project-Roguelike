@@ -25,6 +25,8 @@ public:
 	ROTEXAPI void pushEvent(const rotex::RTEvent event);
 	ROTEXAPI bool isEmpty();
 	ROTEXAPI void clearAll();
+
+	ROTEXAPI const SDL_EventType& getMask();
 };
 
 #endif // ROTEX_EVENT_HANDLER_H

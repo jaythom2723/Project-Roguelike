@@ -36,6 +36,10 @@
 #define RTGUIHEADERFONT rotex::getContext()->headerFont
 #define RTGUIFONT rotex::getContext()->guiFont
 
+#define RTSIDEBAR_X RTGRIDMAP_WIDTH_PX
+#define RTSIDEBAR_WIDTH (RTDISPLAY->getWidth() - RTSIDEBAR_X)
+#define RTSIDEBAR_HEIGHT RTDISPLAY->getHeight()
+
 struct RTContext
 {
 public:
@@ -57,6 +61,8 @@ namespace rotex
 
 	// convert a CP437 character to Unicode to UTF8
 	ROTEXAPI std::string convertString(uint8_t* cp437_str);
+
+	ROTEXAPI void eventLoop(SDL_Event& e, void(*userDefinedEventLoop)(SDL_Event& e));
 
 	template<typename T>
 	bool createEntity(T&& ent)

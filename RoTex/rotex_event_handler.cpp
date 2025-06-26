@@ -39,3 +39,8 @@ void RTEventHandler::clearAll()
 		event_queue.pop();
 	}
 }
+
+const SDL_EventType& RTEventHandler::getMask()
+{
+	return eventMask;
+}

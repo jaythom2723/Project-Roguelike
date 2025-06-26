@@ -196,3 +196,47 @@ std::string rotex::convertString(uint8_t* cp437_str)
 	tmp = nullptr;
 	return ret;
 }
+
+void rotex::eventLoop(SDL_Event& e, void(*userDefinedEventLoop)(SDL_Event& e))
+{
+	int i = 0;
+
+	while (SDL_PollEvent(&e))
+	{
+		// end the application if SDL_EVENT_QUIT
+		if (e.type == SDL_EVENT_QUIT)
+		{
+			RTDISPLAY->setClose(true);
+			return;
+		}
+
+		// push a new event to the RTEntityEV's
+		for (i = 0; i < RTENTITIES.size(); i++)
+		{
+			std::shared_ptr<RTEntityEV> ent = std::dynamic_pointer_cast<RTEntityEV>(RTENTITIES[i]);
+			if (ent.get() == nullptr)
+				continue; // move to the next entity if cannot convert to RTEntityEV
+
+			rotex::RTEvent event = {};
+			event.type = (SDL_EventType)e.type;
+
+			RTEventHandler* handler = ent->getEventHandler();
+
+			// TODO: make this its own function?
+			switch (e.type)
+			{
+			case SDL_EVENT_KEY_DOWN:
+				event.code = e.key.scancode;
+				break;
+			}
+
+			// only push if the mask equals the same type of event
+			if (handler->getMask() == e.type)
+				handler->pushEvent(event);
+		}
+
+		// call the user defined event loop, if necessary
+		if (userDefinedEventLoop != nullptr)
+			(*userDefinedEventLoop)(e);
+	}
+}
