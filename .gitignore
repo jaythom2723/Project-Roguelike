@@ -1,0 +1,6 @@
+external/
+dist/lib
+dist/include
+dist/bin
+dist/
+.idea/
