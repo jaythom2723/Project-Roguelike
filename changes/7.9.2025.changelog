@@ -1,0 +1,39 @@
++ Added a logging system
++ Remade the error handling system with custom message support and an assert function
++ Changed the build system to CMake utilizing archive library files (.a) and dynamic link library files (.dll)
+~ Need to package the linux binaries for SDL3, SDL3_ttf, SDL3_image and lua54
++ Added win32 lua54 binaries (.a, .dll)
++ completed the directory tree for games
+    | game/ <- root directory
+    |   sfx/
+    |       sound/
+    |       music/
+    |   gfx/
+    |       image/
+    |       font/
+    |   data/
+    |       config/
+    |           game.toml <- window title, width, height, etc...
+    |           keymaps.toml
+    |       locale/
+    |           en/
+    |               en.toml <- english localization for the game
+    |       mods/
+    |           core/
+    |               entities/
+    |               scripts/
+    |               gfx/
+    |                   image/
+    |                   font/
+    |               sfx/
+    |                   sound/
+    |                   music/
+    |               core.toml <- mod name, author, version, dependencies, etc...
+    |   log/
+    |       *.log <- debug log files for ease of debugging
+    |   game.exe
+    |   SDL3.dll
+    |   SDL3_ttf.dll
+    |   SDL3_image.dll
+    |   lua54.dll
+    |   librotex.dll

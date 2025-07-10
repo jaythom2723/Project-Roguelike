@@ -3,9 +3,14 @@
 //
 
 #include <iostream>
+#include <string>
 
-int main(void) {
-    printf("Hello World\n");
+#include <rotex/rotex.h>
+
+int main() {
+    rotex::init();
+
+    rotex::close();
 
     return 0;
 }

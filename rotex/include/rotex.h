@@ -5,17 +5,16 @@
 #ifndef ROTEX_H
 #define ROTEX_H
 
-#include <SDL3/SDL.h>
-#include <SDL3_ttf/SDL_ttf.h>
-#include <SDL3_image/SDL_image.h>
+#include <string>
 
 #include "rotex_defs.h"
+#include "display/rotex_display.h"
+#include "rotex_context.h"
 
-#include <string>
-#include <cstdint>
+#define RTCTX rotex::getContext()
 
 namespace rotex {
-    ROTEX_API bool init(std::string& title, uint32_t width, uint32_t height);
+    ROTEX_API bool init();
     ROTEX_API void close();
 }
 
