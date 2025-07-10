@@ -1,0 +1,19 @@
+=====================================================================================================
+[INFO] -> ... | An informational message, nothing to worry about.
+[WARNING] -> ... | A warning thrown by ROTEX. Usually doesn't lead to unusual behavior.
+[ERROR] -> ... | An error thrown by ROTEX. Mostly leads to undefined or unusual behavior.
+[FATAL] -> ... | Fatal error thrown by ROTEX. An error that prevents the program from continuing.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[INFO] -> Log file created.
+[INFO] -> Attempting to initialize SDL3.
+[INFO] -> Successfully initialized SDL3!
+[INFO] -> Attempting to initialize SDL3_ttf.
+[INFO] -> Successfully initialized SDL3_ttf!
+[INFO] -> Engine libraries initialization complete.
+[INFO] -> Initializing RTContext.
+[INFO] -> Attempting to load TOML file (data/config/game.toml).
+[INFO] -> Successfully loaded TOML file (data/config/game.toml).
+[INFO] -> Initializing engine modules.
+[INFO] -> Initializing RTDisplay (SDL_Window, SDL_Renderer, TTF_TextEngine).
+[INFO] -> Successfully initialized the display!
+[INFO] -> Game has been closed. Running Cleanup.
